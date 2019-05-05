@@ -14,20 +14,33 @@
   <div class="background-header">
     <div class="container">
       <div class="row border-bottom">
-        <div class="col-3 pb-1 pt-1 pl-0">
-          <span id="skip-main"><a href="#main">Skip to main</a></span>
+        <div class="col-2 pb-1 pt-1 pl-0">
+          <a id="skip-main" class="skip-link screen-reader-text" href="#main"><?php _e( 'Skip to main', 'fire' ); ?></a>
         </div>
-        <div class="col-3 pb-1">
-          <span>
-            <span id="white-access"></span>
-            <span id="black-access"></span>
+        <div class="col-2 pb-1" id="contrast">
+          <?php
+            if ( is_active_sidebar( 'accessibility-header-widget' ) ) : ?>
+              
+            <?php dynamic_sidebar( 'accessibility-header-widget' ); ?>
+
+          <?php endif; ?>
+        </div>
+        <div class="col-8 float-right text-right">
+          <span class="phone-head">020 3011 4000</span>
+          <span class="text-head">TECHNICAL TRAINING INSTITUTE PBMA | WOMEN'S DESTITUE</span>
+          <span class="social-head">
+            <a href="#"><img src="https://cdn4.iconfinder.com/data/icons/iconsweets/50/search.png" width="20" alt="" /></a>
+            <a href="#"><img src="https://cdn4.iconfinder.com/data/icons/iconsweets/50/search.png" width="20" alt="" /></a>
+            <a href="#"><img src="https://cdn4.iconfinder.com/data/icons/iconsweets/50/search.png" width="20" alt="" /></a>
           </span>
+
         </div>
       </div>
     </div>      
-    <header>
+    
+    <header role="banner">
       <div class="container">
-        <div id="header-image" role="banner">
+        <div id="header-image">
           <!-- <img src="<?php //get_template_directory_uri() . '/assets/images/header.jpg'?>"> -->
           <?php
             // if ( get_theme_mod('header_text') ) {
@@ -67,8 +80,11 @@
                   ?>
                 </nav>
 
-                
+                | <div class="search-header">
+                  <img src="https://cdn4.iconfinder.com/data/icons/iconsweets/50/search.png" alt="search image " width="30">
+                </div>  
               </div>
+              
             </div>
           </div>
         </div>

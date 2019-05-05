@@ -253,4 +253,86 @@ add_action( 'init', 'Facilities_posttype', 0 );
 
 
 
+
+
+function news_posttype() {
+
+
+
+
+    $labels = array(
+        'name'                => _x( 'News', 'Post Type General Name', 'fire' ),
+        'singular_name'       => _x( 'News', 'Post Type Singular Name', 'fire' ),
+        'menu_name'           => __( 'News', 'fire' ),
+        'parent_item_colon'   => __( 'Parent News', 'fire' ),
+        'all_items'           => __( 'All News', 'fire' ),
+        'view_item'           => __( 'View News', 'fire' ),
+        'add_new_item'        => __( 'Add New News', 'fire' ),
+        'add_new'             => __( 'Add New', 'fire' ),
+        'edit_item'           => __( 'Edit News', 'fire' ),
+        'update_item'         => __( 'Update News', 'fire' ),
+        'search_items'        => __( 'Search News', 'fire' ),
+        'not_found'           => __( 'Not Found', 'fire' ),
+        'not_found_in_trash'  => __( 'Not found in Trash', 'fire' ),
+    );
+
+    $args = array(
+        'label'               => __( 'news', 'fire' ),
+        'description'         => __( 'News and reviews', 'fire' ),
+        'labels'              => $labels,
+        // Features this CPT supports in Post Editor
+        'supports'            => array( 'title', 'editor', 'excerpt', 'thumbnail', 'comments', 'revisions', 'custom-fields' ),
+        // You can associate this CPT with a taxonomy or custom taxonomy. 
+        'taxonomies'          => array( 'genres' ),
+        /* A hierarchical CPT is like Pages and can have
+        * Parent and child items. A non-hierarchical CPT
+        * is like Posts.
+        */ 
+        'hierarchical'        => false,
+        'public'              => true,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'show_in_nav_menus'   => true,
+        'show_in_admin_bar'   => true,
+        'menu_position'       => 5,
+        'can_export'          => true,
+        'has_archive'         => true,
+        'exclude_from_search' => false,
+        'publicly_queryable'  => true,
+        'capability_type'     => 'page',
+
+    );
+
+    register_post_type( 'news', $args );
+ 
+    add_theme_support( 'post-thumbnails', array( 'news' ) );
+}
+// Hooking up our function to theme setup
+add_action( 'init', 'news_posttype', 0 );
+
+
+
+
+function wpb_widgets_init() {
+ 
+    register_sidebar( array(
+        'name'          => 'Accessibility Header Widget Area',
+        'id'            => 'accessibility-header-widget',
+        'before_widget' => '<div class="chw-widget">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h2 class="chw-title" style="display: none;" aria-hidden="true">',
+        'after_title'   => '</h2>',
+    ) );
+ 
+}
+add_action( 'widgets_init', 'wpb_widgets_init' );
+
+
+
+
+
+
+
+// flush_rewrite_rules(false);
+
 ?>

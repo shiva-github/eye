@@ -63,9 +63,10 @@ a {
 	max-width: 32%;
 }
 .header-col-2 {
-	flex: 0 0 68%;
-	max-width: 68%;
+	flex: 0 0 65%;
+	max-width: 65%;
 }
+
 .background-header .nav-item.nav-link {
 	/*color: #fff;*/
 }
@@ -133,6 +134,7 @@ button.learn-more, a.learn-more {
     background-color: #004c98;
     margin-top: 5px;
     text-decoration: none;
+    display: inline-block;
 }
 .mainpage #searchsubmit:hover, button:hover {
 	background-color: #525455;
@@ -217,6 +219,9 @@ ul {
 
 
 /*----------------------- hvd theme css-------------------*/
+.home-title {
+	margin-top: 80px;
+}
 .home-title span{
 	width: 100%;
 	display: block;
@@ -287,6 +292,9 @@ ul {
 	float: left;
 }
  
+.success-wrapper {
+	background-image: url();
+}
 
 .state-art-img {
 	float: left;
@@ -298,7 +306,6 @@ ul {
 }
 .state-art-title {
 	font-size: 30px;
-	font-weight: bold;
 	margin-bottom: 15px;
 }
 .state-art-desc {
@@ -318,14 +325,15 @@ ul {
 	margin-top: 30px;
 }
 #v-pills-tab {
-	width: 150px;
-	float: left;
-	margin-left: 150px;
-	margin-right: 15px;
+	width: 210px;
+    float: left;
+    margin-left: 90px;
+    margin-right: 15px;
 }
 #v-pills-tabContent {
 	width: calc(100% - 540px);
 	float: left;
+	position: relative;
 }
 .box {
 	width: 350px;
@@ -638,4 +646,95 @@ ul {
 	width: 100%;
 	padding-left: 0px;
 	list-style: none;
+}
+.link2 {
+	position: absolute;
+    width: 275px;
+    text-align: center;
+    background-color: #324b8e99 ;
+    transform: rotate(90deg);
+    top: 130px;
+    right: -100px;
+    height: 130px;
+    border-top-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+}
+.link2 .wrap-link {
+	color: #fff;
+    display: block;
+    width: 216px;
+    height: 25px;
+    vertical-align: middle;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    padding-left: 60px;
+}
+.link2 a {
+	display: inline-block;
+	color: #fff;
+	pointer-events: none;
+}
+.link2 a:before {
+    height: 3px;
+    width: 60px;
+    background-color: #fff;
+    left: -10px;
+    top: 10px;
+
+
+    content: '';
+    display: block;
+    position: relative;
+    left: -75px;
+    top: 13px;
+}
+.offscreen {
+	text-indent: -100000px;
+	display: inline-block;
+	width: 0px;
+}
+.chw-widget ul {
+	padding: 0;
+	margin: 0;
+}
+.chw-widget ul li {
+	list-style: none;
+	float: left;
+}
+.chw-widget ul li button {
+	border: 1px solid #ddd;
+	background-color: transparent;
+	margin-right: 5px;
+	margin-top: 5px;
+	margin-left: -15px;
+	outline: none;
+}
+.aticon-adjust:before {
+	margin-left: -2px;
+}
+.zeno_font_resizer {
+	margin-bottom: 0px;
+}
+.zeno_font_resizer_minus {
+	font-size: 12px !important;
+}
+.zeno_font_resizer_reset {
+	font-size: 16px !important;
+}
+.zeno_font_resizer_add {
+	font-size: 20px !important;
+}
+.text-head {
+	padding-top: 8px;
+	display: inline-block;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 13px;
+}
+.screen-reader-text, .phone-head {
+	font-size: 13px;
 }

@@ -20,19 +20,19 @@ get_header();
 
 				<div class="col-md-5 offset-md-1">
 					<div class="home-text">
-					<div class="home-title">
-						<span>EXCELLENCE</span>
-						<span style="font-weight: 100;">IN QUALITY</span>
-						<span>AND CONCERN</span>
+						<div class="home-title">
+							<span>EXCELLENCE</span>
+							<span style="font-weight: 100;">IN QUALITY</span>
+							<span>AND CONCERN</span>
+						</div>
+						<div class="home-desc">
+							<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+							magna aliqua.</span>
+							<span>Ut enim ad minim veniam, quis nostrud exercitation
+							ullamco laboris nisi ut aliquip ex ea commodo consequat</span>
+						</div>
+
 					</div>
-					<div class="home-desc">
-						<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-						magna aliqua.</span>
-						<span>Ut enim ad minim veniam, quis nostrud exercitation
-						ullamco laboris nisi ut aliquip ex ea commodo consequat</span>
-					</div>
-					
-				</div>
 				</div>
 				<div class="col-md-6">
 					<img src="<?php echo site_url();?>/wp-content/themes/hvd/assets/images/01.png">
@@ -78,8 +78,10 @@ get_header();
 							$counter = 0;
 							while( $facilities->have_posts() ) :
 								$facilities->the_post();
+								$nameofpost = preg_replace('/[^ \w-]/', '', strtolower(get_the_title()));
+								$nameofpost = str_replace(' ', '-', $nameofpost);
 								?>
-								<a class="nav-link <?php echo ($counter == 0)?'active':'';?>" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-<?php echo strtolower(get_the_title());?>" role="tab" aria-controls="v-pills-<?php echo strtolower(get_the_title());?>" aria-selected="true">
+								<a class="nav-link <?php echo ($counter == 0)?'active':'';?>" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-<?php echo $nameofpost;?>" role="tab" aria-controls="v-pills-<?php echo $nameofpost;?>" aria-selected="true">
 									<?php
 									echo get_the_title();
 									?>
@@ -98,8 +100,10 @@ get_header();
 							$counter = 0;
 							while( $facilities->have_posts() ):
 							$facilities->the_post();
+							$nameofpost = preg_replace('/[^ \w-]/', '', strtolower(get_the_title()));
+							$nameofpost = str_replace(' ', '-', $nameofpost);
 							?>
-							<div class="tab-pane fade show <?php echo ($counter == 0)?'active':'';?>" id="v-pills-<?php echo strtolower(get_the_title());?>" role="tabpanel" aria-labelledby="v-pills-<?php echo strtolower(get_the_title());?>-tab">
+							<div class="tab-pane fade show <?php echo ($counter == 0)?'active':'';?>" id="v-pills-<?php echo $nameofpost; ?>" role="tabpanel" aria-labelledby="v-pills-<?php echo $nameofpost;?>-tab">
 								<div class="box">
 									<?php echo get_the_post_thumbnail(); ?>
 									
@@ -120,6 +124,13 @@ get_header();
 										</a>
 									</div>
 								</div>
+								<?php 
+									if (strlen(get_next_post()->post_title) > 0) {
+
+								 ?>
+								<div class="link2" aria-hidden="true"><div class="wrap-link"><?php next_post_link($format = '%link'); ?></div></div>
+								<?php 
+									} ?>
 							</div>
 
 							<?php
@@ -139,21 +150,32 @@ get_header();
 			?>
 			</div>
 			<div class="pioneer-wrapper clear-both">
-				<div class="pioneer-title">
+				<h2 class="pioneer-title">
 					The Pioneers
-				</div>
+				</h2>
+				<?php
+					$name1_pioneer = get_post_meta($post->ID, 'pioneer_name_1', true);
+					$name2_pioneer = get_post_meta($post->ID, 'pioneer_name_2', true);
+
+					$link1_pioneer = get_post_meta($post->ID, 'pioneer_link_1', true);
+					$link2_pioneer = get_post_meta($post->ID, 'pioneer_link_2', true);
+
+					$image1_pioneer = get_field('pioneer_img_1');
+					$image2_pioneer = get_field('pioneer_img_2');
+					
+				 ?>
 				<div class="pioneer-content clear-both">
 					<div class="pioneer-box">
 						<div class="img-box-pioneer">
-							<img class="img-responsive img-pioneer" src="<?php echo site_url();?>/wp-content/themes/hvd/assets/images/04_Late-Mr-Niranjan-Pandya.png"  style="width: 100%;" />
+							<img class="img-responsive img-pioneer" src="<?php echo $image1_pioneer['url']; ?>" alt="<?php echo $image1_pioneer['alt']; ?>" style="width: 100%;" />
 						</div>
 						<div class="pioneer-name">
-							<?php echo get_post_meta($post->ID, 'pioneer_name_1', true); ?>
+							<?php echo $name1_pioneer; ?>
 						</div>
 						<div class="pioneer-overlay">
 							<div class="pioneer-name">
-								<span>Late Mr. Tukaram Bamankar</span>
-								<span><button class="learn-more">Learn</button></span>
+								<span><?php echo $name1_pioneer; ?></span>
+								<span><a class="learn-more" href="<?php echo $link1_pioneer['url']; ?>" title="<?php echo $link1_pioneer['title']; ?>">Learn</a></span>
 							</div>
 						</div>
 					</div>
@@ -161,15 +183,15 @@ get_header();
 
 					<div class="pioneer-box">
 						<div class="img-box-pioneer">
-							<img class="img-responsive img-pioneer" src="<?php echo site_url();?>/wp-content/themes/hvd/assets/images/04_Late-Mr-Niranjan-Pandya.png"  style="width: 100%;" />
+							<img class="img-responsive img-pioneer" src="<?php echo $image2_pioneer['url']; ?>" alt="<?php echo $image2_pioneer['alt']; ?>" style="width: 100%;" />
 						</div>
 						<div class="pioneer-name">
-							Late Mr. Niranjan Pandya
+							<?php echo $name2_pioneer; ?>
 						</div>
 						<div class="pioneer-overlay">
 							<div class="pioneer-name">
-								<span>Late Mr. Niranjan Pandya</span>
-								<span><button class="learn-more">Learn</button></span>
+								<span><?php echo $name2_pioneer; ?></span>
+								<span><a class="learn-more" href="<?php echo $link2_pioneer['url']; ?>" title="<?php echo $link2_pioneer['title']; ?>">Learn</a></span>
 							</div>
 						</div>
 					</div>
@@ -177,45 +199,10 @@ get_header();
 				</div>
 			</div>
 			<div class="award-wrapper clear-both">
-				<div class="award-title">
+				<h2 class="award-title">
 					Awards & Accreditations
-				</div>
-				<div class="award-content">
-					H.V. Desai Eye Hospital is frequently recognised for its commitment to <br> providing World-Class eye care & excellent patient service
-				</div>
-				<div class="award-images">
-					<div class="award-1">
-						<div class="award-img">
-							<img src="<?php echo site_url();?>/wp-content/themes/hvd/assets/images/NABH.jpg" alt="image-award">
-						</div>
-						<div class="award-name">
-							<span><strong>NABH</strong> Accredited Hospital</span>
-						</div>
-					</div>
-					<div class="award-1">
-						<div class="award-img">
-							<img src="<?php echo site_url();?>/wp-content/themes/hvd/assets/images/Padma-Shri-Medallion.jpg" alt="image-award">
-						</div>
-						<div class="award-name">
-							<span>Late Mr. Niranjan Pandya was honoured by the</span>
-							<span>Government of India, with the fourth highest</span>
-							<span>Indian civilian award of <strong>Padma Shri.</strong></span>
-						</div>
-					</div>
-					<div class="award-1">
-						<div class="award-img">
-							<img src="<?php echo site_url();?>/wp-content/themes/hvd/assets/images/APAO.jpg" alt="image-award">
-						</div>
-						<div class="award-name">
-							<span>Dr. Col.(Retd) Madan Deshpande, has been </span>
-							<span>awarded ‘Outstanding Service in Prevention of </span>
-							<span>Blindness Award by <strong> ‘Asia Pacific Academy</strong></span>
-							<span><strong>of Ophthalmology (APAO)’ </strong></span>
-
-						</div>
-					</div>
-
-				</div>
+				</h2>
+				<?php echo get_post_meta($post->ID, 'awards', true); ?>
 				<div class="awards-view clear-both text-center">
 					<button class="learn-more">View all</button>
 				</div>
@@ -223,18 +210,14 @@ get_header();
 			<div class="ophthalmologists-wrapper clear-both">
 				<div class="row">
 				<div class="col-md-6">
-					<div class="ophthalmologists-title clear-both"><span>Creating ophthalmologists </span><span>or the future</span></div>
-					<div class="ophthalmologists-content clear-both">
-						<p>We have been approved as training centre for Phaco, SICS, Retina, Eye Banking & Cornea, Glaucoma and Pediatric Ophthalmology by Government of India (NPCB).</p>
-						<p>The hospital also offers short term and long term fellowships to upgrade the skills of practicing
-ophthalmologists. so far we have trained more than 600 ophthalmologists nominated by Government of India and private ophthalmologists from all over the country & abroad under skill transfer program
-of the hospital.</p>
-	<p><button class="learn-more">Apply Now</button></p>
-					</div>
+					<?php echo get_post_meta($post->ID, 'creating_ophthalmologists_description', true); ?>
 				</div>
 				<div class="col-md-6">
 					<div class="ophthalmologists-img">
-						<img src="<?php echo site_url();?>/wp-content/themes/hvd/assets/images/05.png" alt="test" class="img-responsive" />
+						<?php 
+							$opth_image = get_field('creating_ophthalmologists_image');
+						?>
+						<img class="img-responsive" src="<?php echo $opth_image['url']; ?>" alt="<?php echo $opth_image['alt']; ?>">
 					</div>
 				</div>
 				</div>
@@ -242,28 +225,11 @@ of the hospital.</p>
 
 
 			<div class="success-wrapper clear-both">
-				<div class="success-title">
+				<h2 class="success-title">
 					Success Stories
-				</div>
-				<div class="success-content">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <br> tempor incididunt ut labore et dolore magna aliqua. 
-				</div>
-				<div class="success-story clear-both">
-					<div class="success-1">
-						<div class="success-name">
-							John Doe
-						</div>
-						<div class="success-desig">
-							Lorem Ipsum
-						</div>
-						<div class="success-desc">
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-							minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-						</div>
-					</div>
-				</div>
+				</h2>
+				
+				<?php echo get_post_meta($post->ID, 'success_story', true); ?>
 				<div class="success-view text-center clear-both">
 					<button class="learn-more">View all</button>
 				</div>
@@ -273,47 +239,84 @@ of the hospital.</p>
 
 
 			<div class="latestnews-wrapper clear-both">
-				<div class="news-title">
+				<h2 class="news-title">
 					Latest News
-				</div>
+				</h2>
+
 				<div class="news-content">
+					<?php
+				$args = array(
+					'post_type'   => 'news',
+					'post_status' => 'publish',
+					'orderby' => 'meta_value',
+					'order' => 'DESC',
+				);
+				
+				$news = new WP_Query( $args );
+				if( $news->have_posts() ) :
+					?>
 					<div class="row">
 						<div class="col-8 left-panel-news">
 							<div class="left-content-news">
 								<div class="news-heading">
-									H.V. Desai Eye Hospital sets up centre to train docs on advanced cataract surgery
+									<?php 
+											$news->the_post();
+											echo get_the_title();
+									 ?>
 								</div>
 								<div class="news-date">
-									February 22, 2019
+									<?php 
+											echo get_the_date();
+									 ?>
 								</div>
 								<div class="news-desc">
-									One of worlds most renowned manufacturer of operating microscope - Zeiss Germany will give
-									technical support to the program. The Phaco training centre will operate according to the international norms and standards.
+									<?php 
+											echo get_the_excerpt();
+									 ?>
 								</div>
 								<div class="text-left mt-2 mb-4 pl-5">
-									<button class="ml-2 learn-more">Learn More</button>
+									<a class="ml-2 learn-more" href="<?php echo get_the_permalink();?>" title="<?php echo get_the_title();?>">Learn More</a>
 								</div>
 							</div>
 						</div>
 						<div class="col-4 right-panel-news">
 							<div class="news-img">
-								<img src="<?php echo site_url();?>/wp-content/themes/hvd/assets/images/05.png"  />
+
+								<?php 
+									$news->the_post();
+									if( null != get_the_post_thumbnail_url() ):
+										?>
+								<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="News Image"  />
+										<?php
+									endif;
+								?>
 							</div>
-							<div class="news-heading mt-2">Eye Doc Makes Annual India
-								Trip, Strengthens Partnership
-								to Prevent, Reverse Blindness
+							<div class="news-heading mt-2">
+								<?php 
+											echo get_the_title();
+									 ?>
 							</div>
-							<div class="news-date">March 4, 2018</div>
-							<div class="news-desc">On his most recent trip, Litwin visited Pune for the first time, to meet with the top brass at HV Desai Eye Hospital.</div>
+							<div class="news-date">
+								<?php 
+											echo get_the_date();
+									 ?>
+							</div>
+							<div class="news-desc">
+								<?php 
+											echo get_the_excerpt();
+									 ?>
+							</div>
 							<div class="text-left mt-2 mb-4 pl-2">
-								<button class="ml-2 learn-more">Learn More</button>
+								<a class="ml-2 learn-more" href="<?php echo get_the_permalink();?>" title="<?php echo get_the_title();?>">Learn More</a>
 							</div>
 						</div>
 					</div>
+				<?php 	wp_reset_postdata();
+						endif; 
+				?>
 				</div>
 				
 			</div>
-
 
 
 
