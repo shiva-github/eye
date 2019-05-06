@@ -125,10 +125,17 @@ get_header();
 									</div>
 								</div>
 								<?php 
-									if (strlen(get_next_post()->post_title) > 0) {
+								
+									if (strlen(get_next_post()->post_title) > 0) 
+									{
+										$post_custom_img_id = get_post_meta(get_next_post()->ID, 'home_image')[0];
+
+										$post_custom_img = wp_get_attachment_image_src( $post_custom_img_id );
+										
 
 								 ?>
-								<div class="link2" aria-hidden="true"><div class="wrap-link"><?php next_post_link($format = '%link'); ?></div></div>
+
+								<div class="link2" aria-hidden="true" style="background-image: url(<?php echo $post_custom_img[0]; ?>)"><div class="wrap-link"><?php next_post_link($format = '%link'); ?></div></div>
 								<?php 
 									} ?>
 							</div>
