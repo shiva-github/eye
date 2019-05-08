@@ -1,5 +1,5 @@
 
-<div class="sticky-container" role="contentinfo"> 
+<div class="sticky-container" id="sticky-sidebar"> 
     <ul class="sticky">
         <li>
             <img src="wp-content/themes/hvd/assets/images/Book-an-appointment.png" width="32" height="32">

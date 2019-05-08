@@ -35,7 +35,7 @@ get_header();
 					</div>
 				</div>
 				<div class="col-md-6">
-					<img src="<?php echo site_url();?>/wp-content/themes/hvd/assets/images/01.png">
+					<img class="home-main-img" src="<?php echo site_url();?>/wp-content/themes/hvd/assets/images/01.png">
 				</div>
 			</div>
 			<?php 
@@ -156,6 +156,7 @@ get_header();
 			endif;
 			?>
 			</div>
+		</div>
 			<div class="pioneer-wrapper clear-both">
 				<h2 class="pioneer-title">
 					The Pioneers
@@ -231,17 +232,18 @@ get_header();
 			</div>
 
 
-			<div class="success-wrapper clear-both">
-				<h2 class="success-title">
-					Success Stories
-				</h2>
-				
-				<?php echo get_post_meta($post->ID, 'success_story', true); ?>
-				<div class="success-view text-center clear-both">
-					<button class="learn-more">View all</button>
-				</div>
-			</div>
+				<div class="success-wrapper clear-both">
+					<img src="/source/circle_02.png" class="circle" />
+					<h2 class="success-title">
+						Success Stories
+					</h2>
 
+					<?php echo get_post_meta($post->ID, 'success_story', true); ?>
+					<div class="success-view text-center clear-both">
+						<button class="learn-more">View all</button>
+					</div>
+				</div>
+			
 
 
 

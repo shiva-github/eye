@@ -2,7 +2,7 @@
 <html <?php language_attributes(); ?>>
 <head>
   <meta charset="<?php bloginfo( 'charset' ); ?>" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?php wp_title(); ?></title>
   <link rel="profile" href="http://gmpg.org/xfn/11" />
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
@@ -14,7 +14,7 @@
   <div class="background-header">
     <div class="container">
       <div class="row border-bottom">
-        <div class="col-2 pb-1 pt-1 pl-0">
+        <div class="col-1 pb-1 pt-1 pl-0">
           <a id="skip-main" class="skip-link screen-reader-text" href="#main"><?php _e( 'Skip to main', 'fire' ); ?></a>
         </div>
         <div class="col-2 pb-1" id="contrast">
@@ -25,15 +25,14 @@
 
           <?php endif; ?>
         </div>
-        <div class="col-8 float-right text-right">
+        <div class="col-9 float-right text-right">
           <span class="phone-head">020 3011 4000</span>
           <span class="text-head">TECHNICAL TRAINING INSTITUTE PBMA | WOMEN'S DESTITUE</span>
           <span class="social-head">
-            <a href="#"><img src="https://cdn4.iconfinder.com/data/icons/iconsweets/50/search.png" width="20" alt="" /></a>
-            <a href="#"><img src="https://cdn4.iconfinder.com/data/icons/iconsweets/50/search.png" width="20" alt="" /></a>
-            <a href="#"><img src="https://cdn4.iconfinder.com/data/icons/iconsweets/50/search.png" width="20" alt="" /></a>
+            <a href="#"><img src="<?php echo site_url().'/wp-content/themes/hvd/assets/images/facebook.png'; ?>" alt="Facebook" /></a>
+            <a href="#"><img src="<?php echo site_url().'/wp-content/themes/hvd/assets/images/twitter.png'; ?>" alt="" /></a>
+            <a href="#"><img src="<?php echo site_url().'/wp-content/themes/hvd/assets/images/linkedin.png'; ?>" alt="" /></a>
           </span>
-
         </div>
       </div>
     </div>      
