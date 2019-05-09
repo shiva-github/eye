@@ -23,8 +23,8 @@ add_action( 'wp_enqueue_scripts', 'fire_theme_enqueue_scripts' );
 function fire_header_logo() {
 	$defaults = array(
 		'default-image'          => get_template_directory_uri() . '/assets/images/header.jpg',
-		'width'                  => 350,
-		'height'                 => 81,
+		'width'                  => 400,
+		'height'                 => 87,
 		'flex-height'            => false,
 		'flex-width'             => false,
 		'uploads'                => true,

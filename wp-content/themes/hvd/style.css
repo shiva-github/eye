@@ -19,12 +19,14 @@ html {
 body {
 	min-height: 100%;
 	position: relative;
-	padding-bottom: 320px;
+	padding-bottom: 560px;
 	font-family: 'Open Sans', sans-serif;
 	background-image: url(../../../wp-content/themes/hvd/assets/images/bg.png);
 	background-repeat: no-repeat;
 }
-
+.logged-in.admin-bar .background-header {
+	padding-top: 10px;
+}
 .widget-title {
 	font-size: 20px;
 	border-bottom: 1px solid #000;
@@ -286,6 +288,7 @@ ul {
 	width: calc(100% - 70px);
 	color: #fff;
 	font-size: 14px;
+	padding-right: 5px;
 }
 
 
@@ -295,9 +298,12 @@ ul {
 	float: left;
 }
 .facilities-wrapper {
-	background-image: url(../../../source/circle_01.png);
-    background-repeat: no-repeat;
-    background-position: 4px 327px;
+	position: relative;
+}
+.facility-circle {
+	position: absolute;
+	bottom: 10px;
+	left: -20px;
 }
 .success-wrapper .circle {
 	position: absolute;
@@ -350,12 +356,12 @@ ul {
 	position: relative;
 }
 .box {
-	width: 350px;
+	width: 490px;
 	border-top-left-radius: 30px;
 	border-bottom-right-radius: 30px;
 	overflow: hidden;
 	border: 1px solid #ddd;
-	margin-left: calc(30% - 100px);
+	margin-left: calc(30% - 120px);
 	box-shadow: 10px 10px 20px 0px #ddd;
 	background-color: #fff;
 }
@@ -366,6 +372,7 @@ ul {
 	margin-top: 15px;
 	outline: none;
 }
+
 .box-content {
 	font-size: 14px;
     padding: 0px 15px 5px 15px;
@@ -467,11 +474,6 @@ ul {
 	margin: auto;
 }
 
-.award-name span {
-	display: block;
-	width: 100%;
-	font-size: 12px;
-}
 .award-title, .success-title {
 	width: 100%;
     margin-bottom: 30px;
@@ -509,6 +511,11 @@ ul {
 	text-align: center;
 	margin-bottom: 15px;
 }
+.award-name span {
+	display: block;
+	width: 100%;
+	font-size: 12px;
+}
 .success-view, .awards-view {
 	margin-top: 25px;
 }
@@ -521,7 +528,7 @@ ul {
     width: 100%;
     overflow: hidden;
 }
-.ophthalmologists-title span{
+.ophthalmologists-title span {
 	width: 100%;
 	float: left;
 	display: block;
@@ -562,6 +569,7 @@ ul {
 }
 .nav-link {
 	padding-left: 50px;
+	padding-bottom: 0px;
 }
 .home-tabs .active {
 	position: relative;
