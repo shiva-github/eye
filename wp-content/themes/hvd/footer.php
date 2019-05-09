@@ -17,13 +17,33 @@
 </div>
 
 <footer>
-	<div class="container footer-container">
+    <div class="footer-wrapper">
+	<div class="container footer-container clear-both">
 		<?php
 		wp_nav_menu();
 		?>
 	</div>
+    <div class="container clear-both ">
+        <div class="newsletter-wrapper">
+            <span class="social-footer float-right">
+                <a href="#"><img src="<?php echo site_url().'/wp-content/themes/hvd/assets/images/facebook.png'; ?>" alt="Facebook" width="30" /></a>
+                <a href="#"><img src="<?php echo site_url().'/wp-content/themes/hvd/assets/images/twitter.png'; ?>" alt="" width="30" /></a>
+                <a href="#"><img src="<?php echo site_url().'/wp-content/themes/hvd/assets/images/linkedin.png'; ?>" alt="" width="30" /></a>
+            </span>
+            <?php if ( is_active_sidebar( 'footer_widget' ) ) : ?>
+                <div id="footer-widget" class="widget float-right">
+                    <?php dynamic_sidebar( 'footer_widget' ); ?>
+                </div><!-- #footer-widget-area -->
+            <?php endif; ?>
+        </div>
+    </div>
+    <div class="copyright">
+        <div class="container clear-both">
+            <span>Copyright ©2019 H. V. Desai Eye Hospital</span><span><a href="#">Disclaimer</a></span>
+        </div>
+    </div>
+</div>
 </footer>
-
 
 <?php wp_footer(); ?>
 </body>

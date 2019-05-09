@@ -19,7 +19,7 @@ html {
 body {
 	min-height: 100%;
 	position: relative;
-	padding-bottom: 560px;
+	padding-bottom: 650px;
 	font-family: 'Open Sans', sans-serif;
 	background-image: url(../../../wp-content/themes/hvd/assets/images/bg.png);
 	background-repeat: no-repeat;
@@ -183,20 +183,19 @@ button.learn-more, a.learn-more {
 	background-color: #525455;
 }
 footer {
-	padding-top: 50px;
-	padding-bottom: 50px;
-	background-color: #cecece;
-	border-top: 1px solid #cecece;
 	
 	/*margin-top: 50px;*/
-
-
 
     position: absolute;
     right: 0;
     bottom: 0;
     left: 0;
     
+}
+.footer-wrapper {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-color: #cecece;
 }
 .img-footer img {
 	margin-left: 15px;
@@ -828,7 +827,69 @@ ul {
 .sticky li p a:hover{
     text-decoration:underline;
 }
+.wp-subscribe-wrap {
+	text-align: left;
+}
 
+#wp-subscribe h4.title {
+	color: #324b8e;
+	text-transform: initial;
+	text-align: left;
+	font-weight: bold;
+	font-size: 18px;
+}
+.wp-subscribe-wrap input.email-field {
+	width: 200px;
+    float: left;
+    background-color: #ffffff77 !important;
+    color: #4c4c4c !important;
+    text-align: left;
+    border-radius: 10px;
+    height: auto;
+    height: 35px;
+}
+.wp-subscribe-wrap input.submit {
+	width: 100px;
+	outline: none;
+	padding-right: 10px;
+    float: left;
+    font-size: 14px !important;
+    background-color: #324b8e !important;
+    color: #fff !important;
+    margin-top: 10px !important;
+    margin-left: 10px;
+    text-transform: initial !important;
+    border-radius: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 35px !important;
+}
+.social-footer {
+	vertical-align: bottom;
+    margin-top: 66px;
+    display: inline-block;
+}
+
+#wp-subscribe {
+	background: none;
+	text-align: left;
+}
+.newsletter-wrapper {
+    margin-top: -98px;
+}
+.copyright a {
+	display: inline-block;
+	margin-left: 30px;
+}
+.copyright {
+	background-color: #bababa;
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 14px;
+	margin-top: 20px;
+	margin-bottom: -80px;
+}
 /*responsive css homepage*/
 @media (min-width: 320px) and (max-width: 767px) {
 	.home-block-wrapper {
@@ -861,5 +922,4 @@ ul {
 	#v-pills-tabContent > .tab-pane {
 		display: block;
 	}
-
 }

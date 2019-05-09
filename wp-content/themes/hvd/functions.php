@@ -2,6 +2,30 @@
 
 require_once 'class-wp-bootstrap-navwalker.php';
 
+function wpb_widgets_init() {
+    // header widget 
+    register_sidebar( array(
+        'name'          => 'Accessibility Header Widget Area',
+        'id'            => 'accessibility-header-widget',
+        'before_widget' => '<div class="chw-widget">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h2 class="chw-title" style="display: none;" aria-hidden="true">',
+        'after_title'   => '</h2>',
+    ) );
+
+
+    // footer widget
+    register_sidebar( array(
+        'name'          => 'Footer Widget',
+        'id'            => 'footer_widget',
+        'before_widget' => '<div class="footer-widget">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h2 class="footer-widget-title">',
+        'after_title'   => '</h2>',
+    ) );
+
+}
+add_action( 'widgets_init', 'wpb_widgets_init' );
 
 
 function fire_theme_enqueue_scripts() {
@@ -310,22 +334,6 @@ function news_posttype() {
 // Hooking up our function to theme setup
 add_action( 'init', 'news_posttype', 0 );
 
-
-
-
-function wpb_widgets_init() {
- 
-    register_sidebar( array(
-        'name'          => 'Accessibility Header Widget Area',
-        'id'            => 'accessibility-header-widget',
-        'before_widget' => '<div class="chw-widget">',
-        'after_widget'  => '</div>',
-        'before_title'  => '<h2 class="chw-title" style="display: none;" aria-hidden="true">',
-        'after_title'   => '</h2>',
-    ) );
- 
-}
-add_action( 'widgets_init', 'wpb_widgets_init' );
 
 
 
