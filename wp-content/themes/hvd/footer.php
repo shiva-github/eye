@@ -25,16 +25,16 @@
 	</div>
     <div class="container clear-both ">
         <div class="newsletter-wrapper">
-            <span class="social-footer float-right">
+            <?php if ( is_active_sidebar( 'footer_widget' ) ) : ?>
+                <div id="footer-widget" class="widget">
+                    <?php dynamic_sidebar( 'footer_widget' ); ?>
+                </div><!-- #footer-widget-area -->
+            <?php endif; ?>
+            <span class="social-footer">
                 <a href="#"><img src="<?php echo site_url().'/wp-content/themes/hvd/assets/images/facebook.png'; ?>" alt="Facebook" width="30" /></a>
                 <a href="#"><img src="<?php echo site_url().'/wp-content/themes/hvd/assets/images/twitter.png'; ?>" alt="" width="30" /></a>
                 <a href="#"><img src="<?php echo site_url().'/wp-content/themes/hvd/assets/images/linkedin.png'; ?>" alt="" width="30" /></a>
             </span>
-            <?php if ( is_active_sidebar( 'footer_widget' ) ) : ?>
-                <div id="footer-widget" class="widget float-right">
-                    <?php dynamic_sidebar( 'footer_widget' ); ?>
-                </div><!-- #footer-widget-area -->
-            <?php endif; ?>
         </div>
     </div>
     <div class="copyright">

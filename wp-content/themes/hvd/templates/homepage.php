@@ -74,6 +74,55 @@ get_header();
 				if( $facilities->have_posts() ) :
 					?>
 					<div class="tab-wrapper clear-both">
+
+						<!-- slider for mobile start-->
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<!--First Slide-->
+								<?php
+							$counter = 0;
+							while( $facilities->have_posts() ):
+								$facilities->the_post();
+								$nameofpost = preg_replace('/[^ \w-]/', '', strtolower(get_the_title()));
+								$nameofpost = str_replace(' ', '-', $nameofpost);
+								?>
+								<div class="swiper-slide">
+									<div class="box">
+										
+										<?php echo get_the_post_thumbnail(); ?>
+										
+										<div class="box-title">
+											<?php
+											echo get_the_title();
+											?>
+
+										</div>
+										<div class="box-content">
+											<?php
+											echo get_the_excerpt();
+											?>
+										</div>
+										<div class="learn-more-wrapper">
+											<a class="learn-more" href="<?php echo get_the_permalink();?>">
+												Learn More
+											</a>
+										</div>
+									</div>
+								</div>
+
+								<?php
+								$counter++;
+							endwhile;
+							$counter = 0;
+							wp_reset_postdata();
+							?>	
+							</div>
+						</div>
+
+						<!-- slider for mobile end -->
+
+
+
 						<div class="nav flex-column home-tabs" id="v-pills-tab" role="tablist" aria-orientation="vertical">
 							<?php
 							$counter = 0;
