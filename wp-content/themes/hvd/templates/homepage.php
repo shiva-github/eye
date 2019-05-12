@@ -76,7 +76,7 @@ get_header();
 					<div class="tab-wrapper clear-both">
 
 						<!-- slider for mobile start-->
-						<div class="swiper-container">
+						<div class="swiper-container d-md-none">
 							<div class="swiper-wrapper">
 								<!--First Slide-->
 								<?php
@@ -89,7 +89,7 @@ get_header();
 								<div class="swiper-slide">
 									<div class="box">
 										
-										<?php echo get_the_post_thumbnail(); ?>
+										<img src="<?php echo get_the_post_thumbnail_url(); ?>" class="facility-img" />
 										
 										<div class="box-title">
 											<?php
@@ -202,6 +202,12 @@ get_header();
 				$name1_pioneer = get_post_meta($post->ID, 'pioneer_name_1', true);
 				$name2_pioneer = get_post_meta($post->ID, 'pioneer_name_2', true);
 
+
+				$name1_pioneer_id_t = preg_replace('/[^ \w-]/', '', strtolower($name1_pioneer));
+				$name1_pioneer_id = str_replace(' ', '-', $name1_pioneer_id_t);
+				$name2_pioneer_id_t = preg_replace('/[^ \w-]/', '', strtolower($name2_pioneer));
+				$name2_pioneer_id = str_replace(' ', '-', $name2_pioneer_id_t);
+
 				$link1_pioneer = get_post_meta($post->ID, 'pioneer_link_1', true);
 				$link2_pioneer = get_post_meta($post->ID, 'pioneer_link_2', true);
 
@@ -214,12 +220,27 @@ get_header();
 						<div class="img-box-pioneer">
 							<img class="img-responsive img-pioneer" src="<?php echo $image1_pioneer['url']; ?>" alt="<?php echo $image1_pioneer['alt']; ?>" style="width: 100%;" />
 						</div>
-						<div class="pioneer-name">
-							<?php echo $name1_pioneer; ?>
-						</div>
-						<div class="pioneer-overlay">
+
+
+						<div class="pioneer-name-link">
+							<svg width="100%" height="27">
+								<defs>
+									<linearGradient id="grad1-<?php echo $name1_pioneer_id; ?>" x1="0%" y1="0%" x2="100%" y2="0%">
+										<stop offset="0%" style="stop-color:#c55055;stop-opacity:1" />
+										<stop offset="50%" style="stop-color:#8f6a8d;stop-opacity:1" />
+										<stop offset="100%" style="stop-color:#314b8c;stop-opacity:1" />
+									</linearGradient>
+
+									<clipPath id="cut-off-bottom-<?php echo $name1_pioneer_id; ?>">
+										<path d="M 0 0 q 230 50 460 0" class="path-change" stroke="url(#grad1-<?php echo $name1_pioneer_id; ?>)" stroke-width="5" fill="none" />
+									</clipPath>
+								</defs>
+								<rect height="50" width="100%" fill="#ddd" clip-path="url(#cut-off-bottom-<?php echo $name1_pioneer_id; ?>)" />
+							</svg>
 							<div class="pioneer-name">
-								<span><?php echo $name1_pioneer; ?></span>
+								<?php echo $name1_pioneer; ?>
+							</div>
+							<div class="pioneer-link">
 								<span><a class="learn-more" href="<?php echo $link1_pioneer['url']; ?>" title="<?php echo $link1_pioneer['title']; ?>">Learn</a></span>
 							</div>
 						</div>
@@ -230,12 +251,25 @@ get_header();
 						<div class="img-box-pioneer">
 							<img class="img-responsive img-pioneer" src="<?php echo $image2_pioneer['url']; ?>" alt="<?php echo $image2_pioneer['alt']; ?>" style="width: 100%;" />
 						</div>
-						<div class="pioneer-name">
-							<?php echo $name2_pioneer; ?>
-						</div>
-						<div class="pioneer-overlay">
+						<div class="pioneer-name-link">
+							<svg width="100%" height="27">
+								<defs>
+									<linearGradient id="grad1-<?php echo $name2_pioneer_id; ?>" x1="0%" y1="0%" x2="100%" y2="0%">
+										<stop offset="0%" style="stop-color:#c55055;stop-opacity:1" />
+										<stop offset="50%" style="stop-color:#8f6a8d;stop-opacity:1" />
+										<stop offset="100%" style="stop-color:#314b8c;stop-opacity:1" />
+									</linearGradient>
+
+									<clipPath id="cut-off-bottom-<?php echo $name2_pioneer_id; ?>">
+										<path d="M 0 0 q 230 50 460 0" class="path-change" stroke="url(#grad1-<?php echo $name2_pioneer_id; ?>)" stroke-width="5" fill="none" />
+									</clipPath>
+								</defs>
+								<rect height="50" width="100%" fill="#ddd" clip-path="url(#cut-off-bottom-<?php echo $name2_pioneer_id; ?>)" />
+							</svg>
 							<div class="pioneer-name">
-								<span><?php echo $name2_pioneer; ?></span>
+								<?php echo $name2_pioneer; ?>
+							</div>
+							<div class="pioneer-link">
 								<span><a class="learn-more" href="<?php echo $link2_pioneer['url']; ?>" title="<?php echo $link2_pioneer['title']; ?>">Learn</a></span>
 							</div>
 						</div>

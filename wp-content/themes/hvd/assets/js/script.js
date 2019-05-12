@@ -2,6 +2,17 @@
 
 	
 	$(document).ready(function($) {
+
+		// homepage svg 
+		$(".pioneer-box").hover(function(){
+			//mouse in
+			$(this).find(".path-change").attr('d', 'M 0 0 q 230 -50 460 0');
+		}, function() {
+			//mouse out
+			$(this).find(".path-change").attr('d', 'M 0 0 q 230 50 460 0');
+		});
+
+		// homepage side sticky block show hide
 		$(".content-block").scrollTop($(".content-block").scrollTop() + 100);
 		if ($(window).scrollTop() > 800) {
 
@@ -24,6 +35,7 @@
 			$(data.target).children("ul").addClass("active");
 		});
 
+		// swiper js for mobile view slider homepage
 		var mySwiper = new Swiper ('.swiper-container', {
 			freeMode: true,
 			freeModeMomentum: true,
