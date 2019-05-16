@@ -12,7 +12,7 @@ Text Domain: fire
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 html {
 	height: calc(100% - 32px);
 }
@@ -21,8 +21,10 @@ body {
 	position: relative;
 	padding-bottom: 650px;
 	font-family: 'Open Sans', sans-serif;
-	background-image: url(../../../wp-content/themes/hvd/assets/images/bg.png);
 	background-repeat: no-repeat;
+}
+body.home {
+	background-image: url(../../../wp-content/themes/hvd/assets/images/bg.png);
 }
 .logged-in.admin-bar .background-header {
 	padding-top: 10px;
@@ -291,7 +293,15 @@ ul {
 }
 
 
-.success-wrapper, .award-wrapper, .ophthalmologists-wrapper, .pioneer-wrapper, .facilities-wrapper, .state-of-art-wrapper, .latestnews-wrapper {
+.three-box-wrapper, 
+.success-wrapper, 
+.award-wrapper, 
+.ophthalmologists-wrapper, 
+.pioneer-wrapper, 
+.facilities-wrapper, 
+.state-of-art-wrapper, 
+.common-wrapper,
+.latestnews-wrapper {
 	margin-top: 125px;
 	width: 100%;
 	float: left;
@@ -364,6 +374,13 @@ ul {
 	box-shadow: 10px 10px 20px 0px #ddd;
 	background-color: #fff;
 }
+.common-box {
+	width: 100%;
+	height: 200px;
+	box-shadow: 8px 7px 20px -5px #bbb;
+	border-top-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
 .box-title {
 	padding: 0px 15px 5px 15px;
 	font-weight: bold;
@@ -397,7 +414,7 @@ ul {
 
 /*bounce animation on hover */
 
-.news-title, .pioneer-title {
+.common-title, .news-title, .pioneer-title {
 	width: 100%;
 	margin-bottom: 30px;
 	font-size: 24px;
@@ -889,6 +906,17 @@ ul {
 .pioneer-link {
 	text-align: center;
 }
+.about-title {
+	font-size: 35px;
+    font-weight: 700;
+}
+.content-block {
+	font-size: 14px;
+}
+.content-block ul li:not(:last-child) {
+	padding-bottom: 20px;
+}
+
 /*responsive css homepage*/
 @media (min-width: 320px) and (max-width: 767px) {
 	.home-block-wrapper {
@@ -979,5 +1007,7 @@ ul {
 	.facility-img {
 		width: 100%;
 	}
+	.common-box {
+		margin-top: 30px;
+	}
 }
-/*445 468*/
