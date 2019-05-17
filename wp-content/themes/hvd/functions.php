@@ -336,7 +336,7 @@ function news_posttype() {
 // Hooking up our function to theme setup
 add_action( 'init', 'news_posttype', 0 );
 
-
+add_theme_support( 'post-thumbnails' );
 
 
 

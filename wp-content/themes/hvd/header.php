@@ -79,8 +79,8 @@
                   ?>
                 </nav>
 
-                | <div class="search-header">
-                  <img src="https://cdn4.iconfinder.com/data/icons/iconsweets/50/search.png" alt="search image " width="30">
+                <div class="search-header">
+                 | <img src="https://cdn4.iconfinder.com/data/icons/iconsweets/50/search.png" alt="search image " width="30">
                 </div>  
               </div>
               

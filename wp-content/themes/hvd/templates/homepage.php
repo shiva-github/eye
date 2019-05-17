@@ -336,7 +336,7 @@ get_header();
 					if( $news->have_posts() ) :
 						?>
 						<div class="row">
-							<div class="col-8 left-panel-news">
+							<div class="col-md-8 left-panel-news">
 								<div class="left-content-news">
 									<div class="news-heading">
 										<?php 
@@ -359,7 +359,7 @@ get_header();
 									</div>
 								</div>
 							</div>
-							<div class="col-4 right-panel-news">
+							<div class="col-md-4 right-panel-news">
 								<div class="news-img">
 
 									<?php 

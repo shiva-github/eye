@@ -29,6 +29,10 @@ body.home {
 .logged-in.admin-bar .background-header {
 	padding-top: 10px;
 }
+
+.background-header + [role="main"] {
+	padding-top: 50px;
+}
 .widget-title {
 	font-size: 20px;
 	border-bottom: 1px solid #000;
@@ -60,6 +64,7 @@ a {
 }
 .background-header {
 	/*background-color: #0081b8;*/
+	box-shadow: 0px 5px 25px 4px #ddd;
 }
 
 .header-col-1 {
@@ -74,10 +79,22 @@ a {
 .search-header {
 	margin-left: 7px;
 	cursor: pointer;
+	margin-top: -20px;
 }
 
 .background-header .nav-item.nav-link {
 	/*color: #fff;*/
+}
+#main_navbar {
+	padding-top: 20px;
+	padding-bottom: 0px;
+}
+#menu-primary-menu > li {
+	padding-top: 15px;
+	padding-bottom: 35px;
+}
+#menu-primary-menu > li.active {
+	border-bottom: 3px solid #41a7bd;
 }
 .background-header .menu-item a, .background-header .menu-item {
 	font-size: 14px;
@@ -86,10 +103,10 @@ a {
 	text-transform: capitalize;
 }
 .wp-custom-logo img.custom-logo {
-    height: 81px;
-    width: 350px;
-    float: left;
-    margin-right: 10px;
+	height: 81px;
+	width: 350px;
+	float: left;
+	margin-right: 10px;
 }
 
 .site-title {
@@ -122,7 +139,7 @@ a {
 
 .row.logo-header-text {
 	padding-top: 25px;
-	padding-bottom: 38px;
+	/*padding-bottom: 38px;*/
 }
 .mainpage input[type="text"] {
 	padding: 0px 10px;
@@ -136,15 +153,15 @@ a {
 }
 button.learn-more, a.learn-more {
 	border: none;
-    font-size: 14px;
-    padding: 5px 25px;
-    border-radius: 20px;
-    color: #fff;
-    background-color: #004c98;
-    margin-top: 5px;
-    text-decoration: none;
-    display: inline-block;
-    outline: none;
+	font-size: 14px;
+	padding: 5px 25px;
+	border-radius: 20px;
+	color: #fff;
+	background-color: #004c98;
+	margin-top: 5px;
+	text-decoration: none;
+	display: inline-block;
+	outline: none;
 }
 .mainpage #searchsubmit:hover, button:hover {
 	background-color: #525455;
@@ -188,11 +205,11 @@ footer {
 	
 	/*margin-top: 50px;*/
 
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+
 }
 .footer-wrapper {
 	padding-top: 50px;
@@ -246,7 +263,7 @@ ul {
 	padding-top: 25px;
 	padding-bottom: 25px;
 	padding-left: 30px;
-    padding-right: 30px;
+	padding-right: 30px;
 	border-radius: 100px;
 	/*background-image: linear-gradient(to right, rgba(195, 80, 86, 0.7) , rgba(54, 76, 141, 0.7));*/
 	background-image: linear-gradient(to right, #c55055 ,#8f6a8d, #314b8c);
@@ -316,9 +333,9 @@ ul {
 }
 .success-wrapper .circle {
 	position: absolute;
-    z-index: -1;
-    left: -150px;
-    top: 45px;
+	z-index: -1;
+	left: -150px;
+	top: 45px;
 }
 .success-wrapper {
 	position: relative;
@@ -355,9 +372,9 @@ ul {
 }
 #v-pills-tab {
 	width: 210px;
-    float: left;
-    margin-left: 90px;
-    margin-right: 15px;
+	float: left;
+	margin-left: 90px;
+	margin-right: 15px;
 }
 #v-pills-tabContent {
 	width: calc(100% - 540px);
@@ -391,7 +408,7 @@ ul {
 
 .box-content {
 	font-size: 14px;
-    padding: 0px 15px 5px 15px;
+	padding: 0px 15px 5px 15px;
 }
 .learn-more-wrapper {
 	padding: 0px 15px 25px 15px;
@@ -485,9 +502,9 @@ ul {
 
 .award-title, .success-title {
 	width: 100%;
-    margin-bottom: 30px;
-    font-size: 25px;
-    text-align: center;
+	margin-bottom: 30px;
+	font-size: 25px;
+	text-align: center;
 }
 .award-content, .success-content {
 	width: 100%;
@@ -511,9 +528,9 @@ ul {
 }
 .award-img img {
 	height: 100px;
-    width: 100px;
-    /* float: left; */
-    margin: auto;
+	width: 100px;
+	/* float: left; */
+	margin: auto;
 }
 .award-name {
 	width: 100%;
@@ -533,9 +550,9 @@ ul {
 }
 .ophthalmologists-img {
 	border-top-left-radius: 30px;
-    border-bottom-right-radius: 30px;
-    width: 100%;
-    overflow: hidden;
+	border-bottom-right-radius: 30px;
+	width: 100%;
+	overflow: hidden;
 }
 .ophthalmologists-title span {
 	width: 100%;
@@ -550,18 +567,18 @@ ul {
 }
 .success-1 {
 	width: 800px;
-    margin: auto;
-    box-shadow: 10px 18px 13px 0px rgba(175, 175, 175, 0.6);
-    padding: 20px 30px;
-    border-radius: 5px;
-    border: 1px solid #ededed;
-    margin-top: 30px;
-    background-color: #fff;
+	margin: auto;
+	box-shadow: 10px 18px 13px 0px rgba(175, 175, 175, 0.6);
+	padding: 20px 30px;
+	border-radius: 5px;
+	border: 1px solid #ededed;
+	margin-top: 30px;
+	background-color: #fff;
 }
 .success-name {
 	font-size: 16px;
-    font-weight: bold;
-    color: #324b8e;
+	font-weight: bold;
+	color: #324b8e;
 }
 .success-desig {
 	font-style: italic;
@@ -571,7 +588,7 @@ ul {
 }
 .success-desc {
 	margin-top: 15px;
-    font-size: 12px;
+	font-size: 12px;
 }
 .success-desc p {
 	margin-bottom: 10px;
@@ -585,19 +602,19 @@ ul {
 }
 .home-tabs .active:before {
 	background-image: linear-gradient(to right, #c55055 ,#8f6a8d, #314b8c);
-    content: '';
-    width: 75px;
-    height: 5px;
-    position: absolute;
-    left: -40px;
-    top: 17px;
+	content: '';
+	width: 75px;
+	height: 5px;
+	position: absolute;
+	left: -40px;
+	top: 17px;
 }
 
 .news-content{
 	width: 100%;
 	box-shadow: 10px 20px 28px #ddd;
 	border-top-left-radius: 30px;
-    overflow: hidden;
+	overflow: hidden;
 }
 .left-panel-news {
 	background-color: #41a7bd;
@@ -643,10 +660,10 @@ ul {
 	margin-top: 10px;
 }
 .right-panel-news .news-desc {
-    padding-left: 15px;
-    padding-right: 15px;
-    font-size: 12px;
-    margin-top: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
+	font-size: 12px;
+	margin-top: 15px;
 }
 .left-content-news {
 	position: absolute;
@@ -685,33 +702,33 @@ ul {
 }
 .link2 {
 	position: absolute;
-    width: 275px;
-    text-align: center;
-    background-color: #324b8e99 ;
-    transform: rotate(90deg);
-    top: 130px;
-    right: -100px;
-    height: 130px;
-    border-top-left-radius: 70px;
-    border-bottom-right-radius: 70px;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: 0px -70px;
+	width: 275px;
+	text-align: center;
+	background-color: #324b8e99 ;
+	transform: rotate(90deg);
+	top: 130px;
+	right: -100px;
+	height: 130px;
+	border-top-left-radius: 70px;
+	border-bottom-right-radius: 70px;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: 0px -70px;
 
 }
 .link2 .wrap-link {
 	color: #fff;
-    display: block;
-    width: 216px;
-    height: 25px;
-    vertical-align: middle;
-    margin: auto;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    padding-left: 60px;
+	display: block;
+	width: 216px;
+	height: 25px;
+	vertical-align: middle;
+	margin: auto;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	padding-left: 60px;
 }
 .link2 a {
 	display: inline-block;
@@ -719,18 +736,18 @@ ul {
 	pointer-events: none;
 }
 .link2 a:before {
-    height: 3px;
-    width: 60px;
-    background-color: #fff;
-    left: -10px;
-    top: 10px;
+	height: 3px;
+	width: 60px;
+	background-color: #fff;
+	left: -10px;
+	top: 10px;
 
 
-    content: '';
-    display: block;
-    position: relative;
-    left: -75px;
-    top: 13px;
+	content: '';
+	display: block;
+	position: relative;
+	left: -75px;
+	top: 13px;
 }
 .offscreen {
 	text-indent: -100000px;
@@ -754,7 +771,7 @@ ul {
 	background-color: transparent;
 	margin-right: 5px;
 	margin-top: 5px;
-	margin-left: -15px;
+	/*margin-left: -15px;*/
 	outline: none;
 }
 .aticon-adjust:before {
@@ -786,56 +803,56 @@ ul {
 }
 
 .sticky-container {
-    padding:0px;
-    margin:0px;
-    position:fixed;
-    right:-130px;
-    top:230px;
-    width:170px;
-    z-index: 1100;
-    background-image: linear-gradient(to bottom, #c55055 , #314b8c);
+	padding:0px;
+	margin:0px;
+	position:fixed;
+	right:-130px;
+	top:230px;
+	width:170px;
+	z-index: 1100;
+	background-image: linear-gradient(to bottom, #c55055 , #314b8c);
 }
 .sticky {
 	margin-bottom: 0px;
 	padding-left: 0px;
 }
 .sticky li{
-    list-style-type:none;
-    color:#efefef;
-    background: transparent;
-    height:43px;
-    padding:0px;
-    margin: 0px;
-    border: 1px solid transparent;
-    -webkit-transition:all 0.25s ease-in-out;
-    -moz-transition:all 0.25s ease-in-out;
-    -o-transition:all 0.25s ease-in-out;
-    transition:all 0.25s ease-in-out;
-    cursor:pointer;
+	list-style-type:none;
+	color:#efefef;
+	background: transparent;
+	height:43px;
+	padding:0px;
+	margin: 0px;
+	border: 1px solid transparent;
+	-webkit-transition:all 0.25s ease-in-out;
+	-moz-transition:all 0.25s ease-in-out;
+	-o-transition:all 0.25s ease-in-out;
+	transition:all 0.25s ease-in-out;
+	cursor:pointer;
 }
 .sticky li:hover{
-    margin-left:-170px;
-    color: #324b8e;
-    background-color: #fff;
-    border-color: #ddd;
+	margin-left:-170px;
+	color: #324b8e;
+	background-color: #fff;
+	border-color: #ddd;
 }
 .sticky li img{
-    float:left;
-    margin:5px 4px;
-    margin-right:5px;
+	float:left;
+	margin:5px 4px;
+	margin-right:5px;
 }
 .sticky li p{
-    padding-top:5px;
-    margin:0px;
-    font-size:14px;
-    line-height: 30px;
+	padding-top:5px;
+	margin:0px;
+	font-size:14px;
+	line-height: 30px;
 }
 .sticky li p a{
-    text-decoration:none;
-    color:#2C3539;
+	text-decoration:none;
+	color:#2C3539;
 }
 .sticky li p a:hover{
-    text-decoration:underline;
+	text-decoration:underline;
 }
 .wp-subscribe-wrap {
 	text-align: left;
@@ -850,29 +867,29 @@ ul {
 }
 .wp-subscribe-wrap input.email-field {
 	width: 200px;
-    float: left;
-    background-color: #ffffff77 !important;
-    color: #4c4c4c !important;
-    text-align: left;
-    border-radius: 10px;
-    height: auto;
-    height: 35px;
+	float: left;
+	background-color: #ffffff77 !important;
+	color: #4c4c4c !important;
+	text-align: left;
+	border-radius: 10px;
+	height: auto;
+	height: 35px;
 }
 .wp-subscribe-wrap input.submit {
 	width: 100px;
 	outline: none;
 	padding-right: 10px;
-    float: left;
-    font-size: 14px !important;
-    background-color: #324b8e !important;
-    color: #fff !important;
-    margin-top: 10px !important;
-    margin-left: 10px;
-    text-transform: initial !important;
-    border-radius: 20px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    height: 35px !important;
+	float: left;
+	font-size: 14px !important;
+	background-color: #324b8e !important;
+	color: #fff !important;
+	margin-top: 10px !important;
+	margin-left: 10px;
+	text-transform: initial !important;
+	border-radius: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	height: 35px !important;
 }
 .social-footer {
 	margin-left: 15px;
@@ -883,9 +900,9 @@ ul {
 	text-align: left;
 }
 .newsletter-wrapper {
-    float: right;
-     width: 512px; 
-     marign-top: -105px;
+	float: right;
+	width: 512px; 
+	marign-top: -105px;
 }
 .copyright a {
 	display: inline-block;
@@ -908,7 +925,10 @@ ul {
 }
 .about-title {
 	font-size: 35px;
-    font-weight: 700;
+	font-weight: 700;
+}
+.common-about-summary {
+	margin-top: 300px;
 }
 .content-block {
 	font-size: 14px;
@@ -926,88 +946,104 @@ ul {
 		border-top-left-radius: 30px;
 		border-bottom-left-radius: 0px;
 		border-bottom-right-radius: 30px;
-	}	
-	
-	.first-block, .second-block, .third-block {
-		width: 100%;
-		border-right: none;
-		padding-bottom: 5px;
-		padding-top: 5px;
-	}
-	#menu-footer .menu-item, .success-1, .box {
-		width: 100%;
-	}
-	#v-pills-tabContent, .state-art-img, .state-art-img img {
-		width: 100%;
-	}
-	.home-main-img, #v-pills-tab, .link2,#v-pills-tabContent > .tab-pane {
-		display: none;
-	}
-	.success-wrapper, .award-wrapper, .ophthalmologists-wrapper, .pioneer-wrapper, .facilities-wrapper, .state-of-art-wrapper, .latestnews-wrapper {
-		margin-top: 50px;
-	}
-	
-	.pioneer-box {
-		width: 100%;
-		margin-top: 30px;
-	}
-	.award-1 {
-		width: 100%;
-	}
-	.widget {
-		width: 100%;
-	}
-	.box {
-		margin-top: 10px;
-	}
-	
-	#menu-footer > li {
-		padding: 10px 0px;
-		border-bottom: 1px solid #4c4c4c;
-		cursor: pointer;
-	}
+		}.left-panel-news .news-date {
+			padding: 0px 30px;
 
-	#menu-footer > li > a + ul {
-		display: none;
+		}	
+		.left-panel-news .news-heading {
+			padding-top: 24px;
+			padding: 20px 30px 0px 30px;
+			font-weight: bold;
+			font-size: 16px;
+		}
+		.left-panel-news .news-desc{
+			padding: 0px 30px  20px;
+		}
+
+		.left-content-news {
+			position: static;
+		}
+
+		.first-block, .second-block, .third-block {
+			width: 100%;
+			border-right: none;
+			padding-bottom: 5px;
+			padding-top: 5px;
+		}
+		#menu-footer .menu-item, .success-1, .box {
+			width: 100%;
+		}
+		#v-pills-tabContent, .state-art-img, .state-art-img img {
+			width: 100%;
+		}
+		.home-main-img, #v-pills-tab, .link2,#v-pills-tabContent > .tab-pane {
+			display: none;
+		}
+		.success-wrapper, .award-wrapper, .ophthalmologists-wrapper, .pioneer-wrapper, .facilities-wrapper, .state-of-art-wrapper, .latestnews-wrapper {
+			margin-top: 50px;
+		}
+
+		.pioneer-box {
+			width: 100%;
+			margin-top: 30px;
+		}
+		.award-1 {
+			width: 100%;
+		}
+		.widget {
+			width: 100%;
+		}
+		.box {
+			margin-top: 10px;
+		}
+
+		#menu-footer > li {
+			padding: 10px 0px;
+			border-bottom: 1px solid #4c4c4c;
+			cursor: pointer;
+		}
+
+		#menu-footer > li > a + ul {
+			display: none;
+		}
+		#menu-footer > li > a + ul.active {
+			display: block;
+		}
+		.newsletter-wrapper {
+			width: 100%;
+			float: left;
+		}
+		.newsletter-wrapper .social-footer {
+			display: block;
+			width: 100%;
+			text-align: left;
+			padding-top: 20px;
+			margin-left: 0px;
+		}
+		.social-footer:after,.social-footer:before,
+		.widget:after,.widget:before {
+			content: '';
+			display: table;
+			clear: both;
+		}
+		#wp-subscribe {
+			padding-left: 0px;
+		}
+		.wp-subscribe-wrap input.email-field {
+			width: 100%;
+		}
+		.swiper-wrapper, .swiper-slide {
+			padding: 0px 0px 0px 30px;
+		}
+		.success-wrapper .circle {
+			left: -100px;
+			top: 200px;
+			width: 300px;
+		}
+		.facility-img {
+			width: 100%;
+		}
+		.common-box {
+			margin-top: 30px;
+		}
 	}
-	#menu-footer > li > a + ul.active {
-		display: block;
-	}
-	.newsletter-wrapper {
-		width: 100%;
-		float: left;
-	}
-	.newsletter-wrapper .social-footer {
-		display: block;
-		width: 100%;
-		text-align: left;
-		padding-top: 20px;
-		margin-left: 0px;
-	}
-	.social-footer:after,.social-footer:before,
-	.widget:after,.widget:before {
-		content: '';
-		display: table;
-		clear: both;
-	}
-	#wp-subscribe {
-		padding-left: 0px;
-	}
-	.wp-subscribe-wrap input.email-field {
-		width: 100%;
-	}
-	.swiper-wrapper, .swiper-slide {
-		padding: 0px 0px 0px 30px;
-	}
-	.success-wrapper .circle {
-		left: -100px;
-		top: 200px;
-		width: 300px;
-	}
-	.facility-img {
-		width: 100%;
-	}
-	.common-box {
-		margin-top: 30px;
-	}
-}

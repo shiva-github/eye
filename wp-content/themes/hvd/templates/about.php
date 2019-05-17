@@ -20,6 +20,7 @@ get_header();
 			$about_summary = get_post_meta($post->ID, 'page_description', true);
 			while (have_posts()) : the_post(); 
 				?>
+				<?php echo the_post_thumbnail(); ?>
 				<div class="row">
 					<div class="col-md-6">
 						<div class="common-about-summary">
