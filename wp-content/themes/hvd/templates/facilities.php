@@ -1,6 +1,6 @@
 <?php
 /**
-* Template Name: About us template
+* Template Name: Facilities template
 *
 * @package WordPress
 * @subpackage fire
@@ -44,28 +44,22 @@ get_header();
 			
 			
 			<div class="common-wrapper clear-both">
-				<h2 class="common-title text-center">
-					Our Pillars
-				</h2>
+				
 				<div class="row">
-					<div class="col-md-3">
-						<div class="common-box">
-							
+					<div class="col-md-8">
+						<div class="accordion active">
+							<div class="accordion-title">Types of Cataract <span class="float-right">-</span></div>
+							<div class="accordion-desc">
+								<ul>
+									<li>A sub-capsular cataract occurs at the back of the lens. People with diabetes or those taking high doses of steroid medications have a greater risk of developing a sub-capsular cataract.</li>
+									<li>A nuclear cataract forms deep in the central zone (nucleus) of the lens. Nuclear cataracts usually are associated with aging.</li>
+									<li>A cortical cataract is characterized by white, wedge-like opacity that starts in the periphery of the lens and works their way to the center in a spoke-like fashion. This type of cataract occurs in the lens cortex, which is the part of the lens that surrounds the central nucleus.</li>
+								</ul>
+							</div>
 						</div>
-					</div>
-					<div class="col-md-3">
-						<div class="common-box">
-							
-						</div>
-					</div>
-					<div class="col-md-3">
-						<div class="common-box">
-							
-						</div>
-					</div>
-					<div class="col-md-3">
-						<div class="common-box">
-							
+
+						<div class="accordion">
+							<div class="accordion-title">Signs & Symptoms of Cataract <span class="float-right">+</span></div>
 						</div>
 					</div>
 				</div>

@@ -80,7 +80,7 @@
                 </nav>
 
                 <div class="search-header">
-                 | <img src="https://cdn4.iconfinder.com/data/icons/iconsweets/50/search.png" alt="search image " width="30">
+                 | <img src="<?php echo site_url(); ?>/wp-content/themes/hvd/assets/images/screenshot.png" alt="search image " width="20">
                 </div>  
               </div>
               
