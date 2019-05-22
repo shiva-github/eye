@@ -354,7 +354,7 @@ get_header();
 										echo get_the_excerpt();
 										?>
 									</div>
-									<div class="text-left mt-2 mb-4 pl-5">
+									<div class="text-left mt-2 mb-4 pl-5 btn-lm-news">
 										<a class="ml-2 learn-more" href="<?php echo get_the_permalink();?>" title="<?php echo get_the_title();?>">Learn More</a>
 									</div>
 								</div>
@@ -386,7 +386,7 @@ get_header();
 									echo get_the_excerpt();
 									?>
 								</div>
-								<div class="text-left mt-2 mb-4 pl-2">
+								<div class="text-left mt-2 mb-4 pl-2 btn-lm-news">
 									<a class="ml-2 learn-more" href="<?php echo get_the_permalink();?>" title="<?php echo get_the_title();?>">Learn More</a>
 								</div>
 							</div>
