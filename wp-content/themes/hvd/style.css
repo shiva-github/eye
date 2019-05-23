@@ -60,7 +60,7 @@ a {
 	color: #4c4c4c;
 }
 .current_page_item.active, .current_page_item.active a {
-	background-color: #ddd;
+	/*background-color: #ddd;*/
 }
 .background-header {
 	/*background-color: #0081b8;*/
@@ -141,6 +141,8 @@ a {
 	padding-top: 25px;
 	/*padding-bottom: 38px;*/
 }
+.mainpage textarea,
+.mainpage input[type="email"],
 .mainpage input[type="text"] {
 	padding: 0px 10px;
 	border-radius: 3px;
@@ -149,7 +151,10 @@ a {
 	border: 1px solid #ddd;
 	text-decoration: none;
 	line-height: 30px;
-	font-size: 16px;
+	font-size: 14px;
+}
+.mainpage textarea {
+	height: auto;
 }
 button.learn-more, a.learn-more {
 	border: none;
@@ -928,9 +933,9 @@ ul {
 	font-weight: 700;
 }
 .common-about-summary {
-	margin-top: 300px;
-    font-size: 25px;
-    color: #fff;
+	margin-top: 460px;
+	font-size: 25px;
+	color: #fff;
 }
 .content-block {
 	font-size: 14px;
@@ -970,13 +975,15 @@ ul {
 	padding: 20px;
 }
 .contact-form-box {
-	box-shadow: 0px 5px 25px 4px #ddd;
-	min-height: 400px;
+	margin-top: 175px;
+	box-shadow: 5px 15px 25px 5px #ddd;
+	min-height: 375px;
 	border-top-left-radius: 50px;
 	border-bottom-right-radius: 50px;
 }
 .contact-news-overrite.left-panel-news {
 	border-top-left-radius: 50px;
+	float: left;
 }
 .contact-news-overrite.right-panel-news {
 	overflow: hidden;
@@ -1026,6 +1033,11 @@ ul {
 .news-listing-date {
 	font-size: 12px;
 }
+.breadcrumbs {
+	float: left;
+	width: 100%;
+}
+
 .about_feature_img {
 	position: absolute;
 	top: -50px;

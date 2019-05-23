@@ -31,7 +31,6 @@ get_header();
 					<div class="col-md-6 about_img_funct">
 						<h1 class="about-title"><?php echo the_title(); ?></h1>
 						<div class="content-block"><?php the_content(); ?></div>
-						
 					</div>
 				</div>
 				<?php
