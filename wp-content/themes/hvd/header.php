@@ -26,12 +26,13 @@
           <?php endif; ?>
         </div>
         <div class="col-9 float-right text-right">
-          <span class="phone-head">020 3011 4000</span>
+
+          <span class="phone-head">020 2697 4000</span>
           <span class="text-head">TECHNICAL TRAINING INSTITUTE PBMA | WOMEN'S DESTITUE</span>
           <span class="social-head">
-            <a href="#"><img src="<?php echo site_url().'/wp-content/themes/hvd/assets/images/facebook.png'; ?>" alt="Facebook" /></a>
-            <a href="#"><img src="<?php echo site_url().'/wp-content/themes/hvd/assets/images/twitter.png'; ?>" alt="" /></a>
-            <a href="#"><img src="<?php echo site_url().'/wp-content/themes/hvd/assets/images/linkedin.png'; ?>" alt="" /></a>
+            <a href="https://www.facebook.com/hvdeh.org/" title="Facebook Social Media" onclick="return ! window.open(this.href);" ><img src="<?php echo site_url().'/wp-content/themes/hvd/assets/images/facebook.png'; ?>" alt="Facebook" /></a>
+            <a href="#" target="_blank" title="Twitter Social Media"><img src="<?php echo site_url().'/wp-content/themes/hvd/assets/images/twitter.png'; ?>" alt="" /></a>
+            <a href="#" target="_blank" title="Linkedin Social Media"><img src="<?php echo site_url().'/wp-content/themes/hvd/assets/images/linkedin.png'; ?>" alt="" /></a>
           </span>
         </div>
       </div>
@@ -53,8 +54,7 @@
                 }
                 ?>
               </div>
-              <!-- <h1 class="site-title float-left mr-1"><a href="<?php //site_url(); ?>"><?php //bloginfo( 'name' ); ?></a></h1> -->
-              <!-- <h2 class="site-description"><a href="<?php //site_url(); ?>"><?php //bloginfo( 'description' ); ?></a></h2> -->
+           
             </div>
 
             <div class="header-col-2">

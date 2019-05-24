@@ -62,7 +62,7 @@ a {
 .current_page_item.active, .current_page_item.active a {
 	/*background-color: #ddd;*/
 }
-.background-header {
+body:not(.home) .background-header {
 	/*background-color: #0081b8;*/
 	box-shadow: 0px 5px 25px 4px #ddd;
 }
@@ -100,7 +100,7 @@ a {
 	font-size: 14px;
 	font-weight: 700;
 	padding-top: 0;
-	text-transform: capitalize;
+	/*text-transform: capitalize;*/
 }
 .wp-custom-logo img.custom-logo {
 	height: 81px;
@@ -679,7 +679,7 @@ ul {
 
 .footer-container > .menu-footer-container > ul > li.menu-item {
 	float: left;
-	width: 16.66%;
+	width: 20%;
 	display: block;
 }
 .footer-container > .menu-footer-container > ul > li.menu-item a {
@@ -803,6 +803,14 @@ ul {
 	margin-right: 10px;
 	font-size: 13px;
 }
+.phone-head {
+	padding-left: 25px;
+    background-image: url(assets/images/call-us.png);
+    display: inline-block;
+    background-repeat: no-repeat;
+    line-height: 23px;
+    background-size: 24px; 
+}
 .screen-reader-text, .phone-head {
 	font-size: 13px;
 }
@@ -840,6 +848,12 @@ ul {
 	color: #324b8e;
 	background-color: #fff;
 	border-color: #ddd;
+}
+.sticky li:hover img {
+	margin-left: 10px;
+}
+.sticky li:hover img:first-child {
+	display: none;
 }
 .sticky li img{
 	float:left;

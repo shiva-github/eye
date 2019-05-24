@@ -2,6 +2,13 @@
 
 	
 	$(document).ready(function($) {
+		$(".accordion-title").click(function(){
+			$(".accordion-desc").slideToggle("slow");
+			$(".accordion ").removeClass("active");
+      // add class to the one we clicked
+      $(this).parent().addClass("active");
+
+  });
 
 		// homepage svg 
 		$(".pioneer-box").hover(function(){

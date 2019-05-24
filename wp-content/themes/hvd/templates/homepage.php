@@ -23,7 +23,8 @@ get_header();
 						<div class="home-title">
 							<span>EXCELLENCE</span>
 							<span style="font-weight: 100;">IN QUALITY</span>
-							<span>AND CONCERN</span>
+							<span>EYE CARE</span>
+							<span>WITH CONCERN</span>
 						</div>
 						<div class="home-desc">
 							<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
