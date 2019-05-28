@@ -19,7 +19,7 @@ html {
 body {
 	min-height: 100%;
 	position: relative;
-	padding-bottom: 650px;
+	padding-bottom: 750px;
 	font-family: 'Open Sans', sans-serif;
 	background-repeat: no-repeat;
 }
@@ -156,7 +156,7 @@ body:not(.home) .background-header {
 .mainpage textarea {
 	height: auto;
 }
-button.learn-more, a.learn-more {
+button.learn-more, a.learn-more, [type="submit"].learn-more {
 	border: none;
 	font-size: 14px;
 	padding: 5px 25px;
@@ -805,11 +805,11 @@ ul {
 }
 .phone-head {
 	padding-left: 25px;
-    background-image: url(assets/images/call-us.png);
-    display: inline-block;
-    background-repeat: no-repeat;
-    line-height: 23px;
-    background-size: 24px; 
+	background-image: url(assets/images/call-us.png);
+	display: inline-block;
+	background-repeat: no-repeat;
+	line-height: 23px;
+	background-size: 24px; 
 }
 .screen-reader-text, .phone-head {
 	font-size: 13px;
