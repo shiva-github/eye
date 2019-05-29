@@ -118,55 +118,7 @@ function login_redirect( $redirect_to, $requested_redirect_to, $user ) {
     }
     return $redirect_to;
 }
-add_filter( 'login_redirect', 'login_redirect', 10, 3 );
 
-//redirect for unauthenticated pages for users.
-add_action('template_redirect','my_non_logged_redirect');
-function my_non_logged_redirect() {
-     if ((is_page('my-action-plan')) && !is_user_logged_in() ) {
-        wp_redirect( home_url() );
-        die();
-    }
-} 
-
-//custom post type for 8 modules
-// function module_posttype() {
-// 	$labels = array(
-// 		'name'               => _x( 'Modules', 'post type general name', 'fire' ),
-// 		'singular_name'      => _x( 'Module', 'post type singular name', 'fire' ),
-// 		'menu_name'          => _x( 'Modules', 'admin menu', 'fire' ),
-// 		'name_admin_bar'     => _x( 'Module', 'add new on admin bar', 'fire' ),
-// 		'add_new'            => _x( 'Add New', 'module', 'fire' ),
-// 		'add_new_item'       => __( 'Add New Module', 'fire' ),
-// 		'new_item'           => __( 'New Module', 'fire' ),
-// 		'edit_item'          => __( 'Edit Module', 'fire' ),
-// 		'view_item'          => __( 'View Module', 'fire' ),
-// 		'all_items'          => __( 'All Modules', 'fire' ),
-// 		'search_items'       => __( 'Search Modules', 'fire' ),
-// 		'parent_item_colon'  => __( 'Parent Modules:', 'fire' ),
-// 		'not_found'          => __( 'No moudles found.', 'fire' ),
-// 		'not_found_in_trash' => __( 'No moudles found in Trash.', 'fire' )
-// 	);
-
-// 	$args = array(
-// 		'labels'             => $labels,
-//         'description'        => __( 'Description.', 'fire' ),
-// 		'public'             => true,
-// 		'publicly_queryable' => true,
-// 		'show_ui'            => true,
-// 		'show_in_menu'       => true,
-// 		'query_var'          => true,
-// 		'rewrite'            => array( 'slug' => 'module' ),
-// 		'capability_type'    => 'post',
-// 		'has_archive'        => true,
-// 		'hierarchical'       => false,
-// 		'menu_position'      => null,
-// 		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt' )
-// 	);
-
-//   register_post_type( 'modules', $args );
-// }
-// add_action( 'init', 'module_posttype' );
 
 
 

@@ -158,15 +158,16 @@ body:not(.home) .background-header {
 }
 button.learn-more, a.learn-more, [type="submit"].learn-more {
 	border: none;
-	font-size: 14px;
-	padding: 5px 25px;
+	font-size: 12px;
+	padding: 8px 25px;
 	border-radius: 20px;
 	color: #fff;
 	background-color: #004c98;
-	margin-top: 5px;
+	margin-top: 15px;
 	text-decoration: none;
 	display: inline-block;
 	outline: none;
+	font-weight: bold;
 }
 .mainpage #searchsubmit:hover, button:hover {
 	background-color: #525455;
@@ -244,7 +245,10 @@ ul {
 	padding-left: 25px;
 }
 
-
+.ongoing-research li,
+.publish-papers li {
+    padding-bottom: 15px;
+}
 
 /*----------------------- hvd theme css-------------------*/
 .home-title {
@@ -310,8 +314,9 @@ ul {
 	float: left;
 	width: calc(100% - 70px);
 	color: #fff;
-	font-size: 14px;
+	font-size: 12px;
 	padding-right: 5px;
+	min-height: 55px;
 }
 
 
@@ -353,6 +358,7 @@ ul {
 	border-bottom-right-radius: 30px;
 	overflow: hidden;
 	width: 490px;
+	margin-top: 13px;
 }
 .contact-getintouch, .state-art-title {
 	font-size: 30px;
@@ -360,7 +366,7 @@ ul {
 	color: #4c4c4c;
 }
 .state-art-desc {
-	font-size: 12px;
+	font-size: 14px;
 }
 .clear-both:after, .clear-both:before {
 	display: table;
@@ -641,7 +647,8 @@ ul {
 .left-panel-news .news-desc {
 	padding-left: 60px;
 	margin-top: 10px;
-	font-size: 12px;
+	font-size: 14px;
+	padding-right: 30px;
 }
 
 .right-panel-news {
@@ -667,7 +674,7 @@ ul {
 .right-panel-news .news-desc {
 	padding-left: 15px;
 	padding-right: 15px;
-	font-size: 12px;
+	font-size: 14px;
 	margin-top: 15px;
 }
 .left-content-news {

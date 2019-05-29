@@ -67,7 +67,7 @@ get_header();
 				$args = array(
 					'post_type'   => 'facilities',
 					'post_status' => 'publish',
-					'orderby' => 'meta_value',
+					'orderby' => 'date',
 					'order' => 'ASC',
 				);
 				
@@ -337,7 +337,7 @@ get_header();
 					if( $news->have_posts() ) :
 						?>
 						<div class="row">
-							<div class="col-md-8 left-panel-news">
+							<div class="col-md-9 left-panel-news">
 								<div class="left-content-news">
 									<div class="news-heading">
 										<?php 
@@ -360,7 +360,7 @@ get_header();
 									</div>
 								</div>
 							</div>
-							<div class="col-md-4 right-panel-news">
+							<div class="col-md-3 right-panel-news">
 								<div class="news-img">
 
 									<?php 
