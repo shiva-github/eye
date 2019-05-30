@@ -24,7 +24,7 @@ get_header();
 							<span>EXCELLENCE</span>
 							<span style="font-weight: 100;">IN QUALITY</span>
 							<span>EYE CARE</span>
-							<span>WITH CONCERN</span>
+							<span style="font-weight: 100;">WITH CONCERN</span>
 						</div>
 						<div class="home-desc">
 							<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore

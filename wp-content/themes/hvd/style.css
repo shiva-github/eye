@@ -253,6 +253,7 @@ ul {
 /*----------------------- hvd theme css-------------------*/
 .home-title {
 	margin-top: 80px;
+	line-height: 50px;
 }
 .home-title span{
 	width: 100%;
