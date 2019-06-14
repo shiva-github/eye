@@ -33,9 +33,9 @@ get_header(); ?>
 			endwhile;
 
 			?>
-			<div class="three-box-wrapper clear-both">
+			
 				<?php echo get_post_meta($post->ID, 'page_content', true); ?>
-			</div>
+			
 
 		</div>
 	</div>

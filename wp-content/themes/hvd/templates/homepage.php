@@ -27,10 +27,7 @@ get_header();
 							<span style="font-weight: 100;">WITH CONCERN</span>
 						</div>
 						<div class="home-desc">
-							<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-							magna aliqua.</span>
-							<span>Ut enim ad minim veniam, quis nostrud exercitation
-							ullamco laboris nisi ut aliquip ex ea commodo consequat</span>
+							<span>We firmly believe in delivering the highest quality of care, not only in terms of the best clinical care, but also in terms of ensuring the safety of our patients, in addition to providing them a delightful experience.</span>
 						</div>
 
 					</div>
@@ -89,8 +86,8 @@ get_header();
 								?>
 								<div class="swiper-slide">
 									<div class="box">
-										
-										<img src="<?php echo get_the_post_thumbnail_url(); ?>" class="facility-img" />
+										<!-- echo get_post_meta(get_the_ID(), 'home_page', true)[0] -->
+										<img src="<?php echo get_post_meta(get_the_ID(), 'home_page', true)[0]; ?>" class="facility-img" />
 										
 										<div class="box-title">
 											<?php
@@ -157,8 +154,13 @@ get_header();
 								<div class="tab-pane fade show <?php echo ($counter == 0)?'active':'';?>" id="v-pills-<?php echo $nameofpost; ?>" role="tabpanel" aria-labelledby="v-pills-<?php echo $nameofpost;?>-tab">
 									<div class="box">
 										
-										<?php echo get_the_post_thumbnail(); ?>
-										
+										<?php 
+
+										$img_facility = get_field('home_image');
+
+										// echo $img_facility->ID;
+										 ?>
+										<img src="<?php echo $img_facility['url']; ?>" />										
 										<div class="box-title">
 											<?php
 											echo get_the_title();
@@ -398,18 +400,6 @@ get_header();
 				</div>
 				
 			</div>
-
-
-
-
-
-
-
-
-
-
-
-
 
 		</div>
 	</div>
