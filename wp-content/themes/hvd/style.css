@@ -1348,6 +1348,13 @@ h2 {
 		padding: 0px 20px;
 		background-color: #fff;
 		z-index: 2;
+		top: 0;
+	}
+	.navbar-toggler.active {
+		position: fixed;
+		top: 20px;
+		right: 20px;
+		z-index: 3;
 	}
 	.about_feature_img {
 		position: static;
@@ -1371,9 +1378,25 @@ h2 {
 	.pioneer-wrapper .circle .text {
 		right: 15px;
 	}
-	.search-header {
+	.common-about-summary, .search-header {
 		display: none;
 	}
+	#contrast {
+		float: right;
+	}
+	.breadcrumbs + p {
+		display: block;
+		width: 100%;
+		float: left;
+	}
+	/*success page*/
+	.page-id-277 .three-box-wrapper .success-name {
+		margin-top: 50px;
+	}
+	.home-main-img-res {
+		width: 100%;
+	}
+
 }
 
 @-moz-keyframes bounce {

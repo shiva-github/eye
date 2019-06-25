@@ -95,7 +95,9 @@
                 event.preventDefault();
             }
         });
-
+        $(".navbar-toggler").click(function(){
+            $(this).toggleClass('active');
+        });
 
         $(".circle, .common-circle").click(function() {
             console.log($(this).data());

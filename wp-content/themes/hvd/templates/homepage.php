@@ -18,7 +18,7 @@ get_header();
 		<div class="col-xl-12 mainpage">
 			<div class="row">
 				<div class="col-12 d-block d-sm-block d-md-none">
-					<img class="home-main-img" src="<?php echo site_url();?>/wp-content/themes/hvd/assets/images/01.png">
+					<img class="home-main-img-res" src="<?php echo site_url();?>/wp-content/themes/hvd/assets/images/01.png">
 				</div>
 
 				<div class="col-md-5 offset-md-1">
