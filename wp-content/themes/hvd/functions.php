@@ -90,10 +90,10 @@ function fire_sidebar_widgets_init() {
 	register_sidebar( array(
 		'name'          => 'Primary Sidebar',
 		'id'            => 'fire_sidebar',
-		'before_widget' => '<div class="widget-wrapper">',
+		'before_widget' => '<div class="widget-wrapper clear-both">',
 		'after_widget'  => '</div></div>',
 		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2><div class="widget-content">',
+		'after_title'   => '</h2><div class="widget-content clear-both">',
 	) );
 
 }

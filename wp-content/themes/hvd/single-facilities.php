@@ -16,7 +16,7 @@ get_header(); ?>
 				?>
 				
 				<div class="row">
-					<div class="col-md-6">
+					<div class="col-md-6 facilities-img-wrap">
 						<div class="common-about-summary">
 							<?php echo the_post_thumbnail('large', array('class' => 'img-responsive about_feature_img')); ?>
 							<?php  //echo $about_summary; ?>

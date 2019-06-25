@@ -41,35 +41,6 @@ get_header();
 			<div class="three-box-wrapper clear-both">
 				<?php echo get_post_meta($post->ID, 'vision_mission_values', true); ?>
 			</div>
-			
-			
-			<div class="common-wrapper clear-both">
-				<h2 class="common-title text-center">
-					Our Pillars
-				</h2>
-				<div class="row">
-					<div class="col-md-3">
-						<div class="common-box">
-							
-						</div>
-					</div>
-					<div class="col-md-3">
-						<div class="common-box">
-							
-						</div>
-					</div>
-					<div class="col-md-3">
-						<div class="common-box">
-							
-						</div>
-					</div>
-					<div class="col-md-3">
-						<div class="common-box">
-							
-						</div>
-					</div>
-				</div>
-			</div>
 		</div>
 	</div>
 </div>

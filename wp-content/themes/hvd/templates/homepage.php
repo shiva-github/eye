@@ -17,15 +17,17 @@ get_header();
 	<div class="row">
 		<div class="col-xl-12 mainpage">
 			<div class="row">
+				<div class="col-12 d-block d-sm-block d-md-none">
+					<img class="home-main-img" src="<?php echo site_url();?>/wp-content/themes/hvd/assets/images/01.png">
+				</div>
 
 				<div class="col-md-5 offset-md-1">
 					<div class="home-text">
-						<div class="home-title">
-							<span>EXCELLENCE</span>
-							<span style="font-weight: 100;">IN QUALITY</span>
-							<span>EYE CARE</span>
-							<span style="font-weight: 100;">WITH CONCERN</span>
-						</div>
+						<h1 class="home-title">
+							<span>Excellence</span>
+							<span>in Quality Eye Care</span>
+							<span>with Concern</span>
+						</h1>
 						<div class="home-desc">
 							<span>We firmly believe in delivering the highest quality of care, not only in terms of the best clinical care, but also in terms of ensuring the safety of our patients, in addition to providing them a delightful experience.</span>
 						</div>
@@ -49,14 +51,14 @@ get_header();
 			<div class="state-of-art-wrapper clear-both">
 				
 				<div class="state-art-img"><img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"></div>
-				<div class="state-art-title"><?php echo get_post_meta($post->ID, 'state_of_art_title', true); ?></div>
+				<h2  class="state-art-title"><?php echo get_post_meta($post->ID, 'state_of_art_title', true); ?></h2>
 				<div class="state-art-desc">
 					<?php echo get_post_meta($post->ID, 'state_of_art_description', true); ?>
 				</div>
 			</div>
 			<div class="facilities-wrapper clear-both">
 				<h2 class="home-facilities-title">Our Facilities</h2>
-				<img src="../../../source/circle_01.png" class="facility-circle" />
+				<!-- <img src="../../../source/circle_01.png" class="facility-circle" /> -->
 				
 
 
@@ -83,11 +85,14 @@ get_header();
 								$facilities->the_post();
 								$nameofpost = preg_replace('/[^ \w-]/', '', strtolower(get_the_title()));
 								$nameofpost = str_replace(' ', '-', $nameofpost);
+								$img_facility = get_field('home_image');
 								?>
 								<div class="swiper-slide">
 									<div class="box">
 										<!-- echo get_post_meta(get_the_ID(), 'home_page', true)[0] -->
-										<img src="<?php echo get_post_meta(get_the_ID(), 'home_page', true)[0]; ?>" class="facility-img" />
+										<img src="<?php echo $img_facility['url']; ?>" class="facility-img" />
+										<!-- <img src="<?php //echo get_post_meta(get_the_ID(), 'home_page', true)[0]; ?>" class="facility-img" /> -->
+
 										
 										<div class="box-title">
 											<?php
@@ -198,7 +203,7 @@ get_header();
 				</div>
 			</div>
 			<div class="pioneer-wrapper clear-both">
-				<h2 class="pioneer-title">
+				<h2 class="pioneer-title text-center">
 					The Pioneers
 				</h2>
 				<?php
@@ -220,62 +225,19 @@ get_header();
 				?>
 				<div class="pioneer-content clear-both">
 					<div class="pioneer-box">
-						<div class="img-box-pioneer">
-							<img class="img-responsive img-pioneer" src="<?php echo $image1_pioneer['url']; ?>" alt="<?php echo $image1_pioneer['alt']; ?>" style="width: 100%;" />
+						<div class="circle" style="    background-position-x: -75px;background-image: url(<?php echo $image1_pioneer['url']; ?>);" data-image="<?php echo $image1_pioneer['url']; ?>" data-name="<?php echo $name1_pioneer; ?>" data-designation="" data-html='<p>He founded The Poona Blind Men’s Association in the year 1952 in Pune and was the President of the organization.</p><p>He was affectionately called ‘Appaji’ by the blind people.</p><p>He was the recipient of Barrister Rustom  Merwanji Alpaiwala  Award for his outstanding contribution in social work and blind welfare in January, 1980.</p><p>He was also the recipient of Louis Braille Memorial Award on 25th May, 1980.</p>'>
+							<div class="text" data-toggle="modal" data-target="#bioModal"><img src="/wp-content/themes/hvd/assets/images/h-v-desai-angel-arrow.png"></div>
 						</div>
-
-
-						<div class="pioneer-name-link">
-							<svg width="100%" height="27">
-								<defs>
-									<linearGradient id="grad1-<?php echo $name1_pioneer_id; ?>" x1="0%" y1="0%" x2="100%" y2="0%">
-										<stop offset="0%" style="stop-color:#c55055;stop-opacity:1" />
-										<stop offset="50%" style="stop-color:#8f6a8d;stop-opacity:1" />
-										<stop offset="100%" style="stop-color:#314b8c;stop-opacity:1" />
-									</linearGradient>
-
-									<clipPath id="cut-off-bottom-<?php echo $name1_pioneer_id; ?>">
-										<path d="M 0 0 q 230 50 460 0" class="path-change" stroke="url(#grad1-<?php echo $name1_pioneer_id; ?>)" stroke-width="5" fill="none" />
-									</clipPath>
-								</defs>
-								<rect height="50" width="100%" fill="#ddd" clip-path="url(#cut-off-bottom-<?php echo $name1_pioneer_id; ?>)" />
-							</svg>
-							<div class="pioneer-name">
-								<?php echo $name1_pioneer; ?>
-							</div>
-							<div class="pioneer-link">
-								<span><a class="learn-more" href="<?php echo $link1_pioneer['url']; ?>" title="<?php echo $link1_pioneer['title']; ?>">Learn</a></span>
-							</div>
-						</div>
+						<div class="pioneer-name"><?php echo $name1_pioneer;?></div>
 					</div>
 
 
 					<div class="pioneer-box">
-						<div class="img-box-pioneer">
-							<img class="img-responsive img-pioneer" src="<?php echo $image2_pioneer['url']; ?>" alt="<?php echo $image2_pioneer['alt']; ?>" style="width: 100%;" />
-						</div>
-						<div class="pioneer-name-link">
-							<svg width="100%" height="27">
-								<defs>
-									<linearGradient id="grad1-<?php echo $name2_pioneer_id; ?>" x1="0%" y1="0%" x2="100%" y2="0%">
-										<stop offset="0%" style="stop-color:#c55055;stop-opacity:1" />
-										<stop offset="50%" style="stop-color:#8f6a8d;stop-opacity:1" />
-										<stop offset="100%" style="stop-color:#314b8c;stop-opacity:1" />
-									</linearGradient>
 
-									<clipPath id="cut-off-bottom-<?php echo $name2_pioneer_id; ?>">
-										<path d="M 0 0 q 230 50 460 0" class="path-change" stroke="url(#grad1-<?php echo $name2_pioneer_id; ?>)" stroke-width="5" fill="none" />
-									</clipPath>
-								</defs>
-								<rect height="50" width="100%" fill="#ddd" clip-path="url(#cut-off-bottom-<?php echo $name2_pioneer_id; ?>)" />
-							</svg>
-							<div class="pioneer-name">
-								<?php echo $name2_pioneer; ?>
-							</div>
-							<div class="pioneer-link">
-								<span><a class="learn-more" href="<?php echo $link2_pioneer['url']; ?>" title="<?php echo $link2_pioneer['title']; ?>">Learn</a></span>
-							</div>
+						<div class="circle" title="<?php echo $image2_pioneer['alt']; ?>" style="    background-position-x: -150px;background-image: url(<?php echo $image2_pioneer['url']; ?>);" data-image="<?php echo $image2_pioneer['url']; ?>" data-name="<?php echo $name2_pioneer; ?>">
+							<div class="text"data-toggle="modal" data-target="#bioModal"><img src="/wp-content/themes/hvd/assets/images/h-v-desai-angel-arrow.png"></div>
 						</div>
+						<div class="pioneer-name"><?php echo $name2_pioneer;?></div>
 					</div>
 
 				</div>
@@ -285,9 +247,7 @@ get_header();
 					Awards & Accreditations
 				</h2>
 				<?php echo get_post_meta($post->ID, 'awards', true); ?>
-				<div class="awards-view clear-both text-center">
-					<button class="learn-more">View all</button>
-				</div>
+				
 			</div>
 			<div class="ophthalmologists-wrapper clear-both">
 				<div class="row">
@@ -313,9 +273,7 @@ get_header();
 				</h2>
 
 				<?php echo get_post_meta($post->ID, 'success_story', true); ?>
-				<div class="success-view text-center clear-both">
-					<button class="learn-more">View all</button>
-				</div>
+				
 			</div>
 			
 

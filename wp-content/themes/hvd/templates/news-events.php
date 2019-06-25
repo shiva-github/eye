@@ -15,10 +15,12 @@ get_header();
 <div class="container" role="main">
 	<div class="row">
 		<div class="col-xl-12 mainpage">
+
 			<?php 
 				while (have_posts()) : the_post(); 
 					?>
 			<h1 class="about-title mb-4"><?php echo the_title(); ?></h1>
+			<div class="breadcrumbs mb-4 clear-both"><a href="/">Home</a>  /<strong> News & Events </strong></div>
 					<?php
 
 				endwhile;

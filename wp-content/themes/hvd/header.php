@@ -14,18 +14,18 @@
   <div class="background-header">
     <div class="container">
       <div class="row border-bottom">
-        <div class="col-1 pb-1 pt-1 pl-0">
+        <div class="col-md-1 pb-1 pt-1 pl-0 col-6">
           <a id="skip-main" class="skip-link screen-reader-text" href="#main"><?php _e( 'Skip to main', 'fire' ); ?></a>
         </div>
-        <div class="col-2 pb-1" id="contrast">
+        <div class="col-6 col-md-2 pb-1" id="contrast">
           <?php
-            if ( is_active_sidebar( 'accessibility-header-widget' ) ) : ?>
-              
+          if ( is_active_sidebar( 'accessibility-header-widget' ) ) : ?>
+
             <?php dynamic_sidebar( 'accessibility-header-widget' ); ?>
 
           <?php endif; ?>
         </div>
-        <div class="col-9 float-right text-right">
+        <div class="d-none d-sm-block d-md-block col-md-9 float-right text-right">
 
           <span class="phone-head">020 2697 4000</span>
           <span class="text-head">TECHNICAL TRAINING INSTITUTE PBMA | WOMEN'S DESTITUE</span>
@@ -54,7 +54,7 @@
                 }
                 ?>
               </div>
-           
+
             </div>
 
             <div class="header-col-2">
@@ -80,13 +80,17 @@
                 </nav>
 
                 <div class="search-header">
-                 | <img src="<?php echo site_url(); ?>/wp-content/themes/hvd/assets/images/screenshot.png" alt="search image " width="20">
-                </div>  
+                 | <img src="<?php echo site_url(); ?>/wp-content/themes/hvd/assets/images/screenshot.png" alt="search image " width="20" class="toggle">
+                 <div class="search-wrapper" style="display: none;">
+                  <?php get_search_form();?>
+                </div>
               </div>
-              
+
             </div>
+
           </div>
         </div>
       </div>
-    </header>
-  </div>
+    </div>
+  </header>
+</div>
