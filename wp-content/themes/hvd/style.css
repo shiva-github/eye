@@ -1146,6 +1146,38 @@ h2 {
 .modal-body .content p {
 	text-align: justify; 
 }
+/*css transition for images */
+.pioneer-wrapper .circle {
+  border-radius: 50%;
+  width: 300px;
+  min-height: 300px;
+  transition: all .3s ease-in-out;
+  margin: auto;
+  border: 1px solid #ddd;
+}
+
+
+.pioneer-wrapper .circle .text {
+  background-color: #fff;
+  text-align: center;
+  position: absolute;
+  right: 75px;
+  bottom: 75px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  line-height: 50px;
+  margin-left: 0px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.pioneer-wrapper .circle .text img {
+	transition: all .3s ease-in-out;
+}
+.pioneer-wrapper .circle:hover .text img {
+ 	animation: bounce 1s infinite;
+}
 
 
 .common-circle {
@@ -1321,53 +1353,28 @@ h2 {
 		position: static;
 		width: 100%;
 		border-bottom-right-radius: 0px;
+		height: auto;
 	}
 	.common-about-summary {
 		width: 100%;
-		margin-left: -15px;
-		margin-right: -15px;
 		margin-top: -50px !important;
 	}
+	.state-art-title, .about-title {
+		margin-top: 15px;
+		float: left;
+	}
+	.modal-body .content {
+		padding: 20px;
+		height: 150px;
+		overflow: auto;
+	}
+	.pioneer-wrapper .circle .text {
+		right: 15px;
+	}
+	.search-header {
+		display: none;
+	}
 }
-
-
-
-
-
-/*css transition for images */
-.pioneer-wrapper .circle {
-  border-radius: 50%;
-  width: 300px;
-  min-height: 300px;
-  transition: all .3s ease-in-out;
-  margin: auto;
-  border: 1px solid #ddd;
-}
-
-
-.pioneer-wrapper .circle .text {
-  background-color: #fff;
-  text-align: center;
-  position: absolute;
-  right: 75px;
-  bottom: 75px;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  line-height: 50px;
-  margin-left: 0px;
-  border: 1px solid #ddd;
-  cursor: pointer;
-}
-
-.pioneer-wrapper .circle .text img {
-	transition: all .3s ease-in-out;
-}
-.pioneer-wrapper .circle:hover .text img {
- 	animation: bounce 1s infinite;
-}
-
-
 
 @-moz-keyframes bounce {
 	0%,
