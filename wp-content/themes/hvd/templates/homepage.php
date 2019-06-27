@@ -24,9 +24,9 @@ get_header();
 				<div class="col-md-5 offset-md-1">
 					<div class="home-text">
 						<h1 class="home-title">
-							<span>Excellence</span>
-							<span>in Quality Eye Care</span>
-							<span>with Concern</span>
+							<span class="gradient"><span style="font-weight: bold;">Excellence</span></span>
+							<span class="gradient">in Quality <span style="font-weight: bold;">Eye Care</span></span>
+							<span class="gradient">with <span style="font-weight: bold;">Concern</span></span>
 						</h1>
 						<div class="home-desc">
 							<span>We firmly believe in delivering the highest quality of care, not only in terms of the best clinical care, but also in terms of ensuring the safety of our patients, in addition to providing them a delightful experience.</span>

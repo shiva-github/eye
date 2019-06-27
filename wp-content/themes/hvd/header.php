@@ -28,7 +28,7 @@
         <div class="d-none d-sm-block d-md-block col-md-9 float-right text-right">
 
           <span class="phone-head">020 2697 4000</span>
-          <span class="text-head">TECHNICAL TRAINING INSTITUTE PBMA | WOMEN'S DESTITUE</span>
+          <span class="text-head"><a href="http://www.pbmaindia.org/" target="_blank">TECHNICAL TRAINING INSTITUTE PBMA</a> | WOMEN'S DESTITUE</span>
           <span class="social-head">
             <a href="https://www.facebook.com/hvdeh.org/" title="Facebook Social Media" onclick="return ! window.open(this.href);" ><img src="<?php echo site_url().'/wp-content/themes/hvd/assets/images/facebook.png'; ?>" alt="Facebook" /></a>
             <a href="#" target="_blank" title="Twitter Social Media"><img src="<?php echo site_url().'/wp-content/themes/hvd/assets/images/twitter.png'; ?>" alt="" /></a>

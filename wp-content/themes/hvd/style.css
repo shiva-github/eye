@@ -285,7 +285,7 @@ ul {
 	margin-top: 80px;
 	line-height: 50px;
 }
-.home-title span {
+.home-title span.gradient {
 	width: 100%;
 	display: block;
 	font-size: 40px;
@@ -979,9 +979,12 @@ ul {
 	color: #4c4c4c;
 }
 .common-about-summary {
-	margin-top: 460px;
+	margin-top: 480px;
 	font-size: 25px;
 	color: #fff;
+}
+.success-summary {
+	margin-top: 350px;
 }
 
 .content-block {
@@ -1045,6 +1048,22 @@ ul {
 .contact-title {
 	font-size: 14px;
 	font-weight: bold;
+	padding-left: 30px;
+	margin-left: -30px;
+	background-repeat: no-repeat;
+}
+.contact-title.contact-icon {
+	background-image: url(/wp-content/themes/hvd/assets/images/Call.png);
+}
+.contact-title.email-icon {
+	background-image: url(/wp-content/themes/hvd/assets/images/Email-Us.png);
+}
+.contact-title.addr-icon {
+	background-image: url(/wp-content/themes/hvd/assets/images/Address.png);
+	line-height: 25px;
+}
+.contact-title.hours-icon {
+	background-image: url(/wp-content/themes/hvd/assets/images/Working-Hours.png);
 }
 .contact-data {
 	font-size: 14px;
@@ -1091,6 +1110,10 @@ ul {
 	right: 15px;
 	border-bottom-right-radius: 90px;
 	z-index: -1;
+}
+.storypg_feature_img {
+	top: 0px;
+	border-bottom-right-radius: 0px;
 }
 .color-dgrey {
 	color: #212529;
@@ -1168,8 +1191,8 @@ h2 {
   border-radius: 50%;
   line-height: 50px;
   margin-left: 0px;
-  border: 1px solid #ddd;
   cursor: pointer;
+  box-shadow: 3px 3px 10px -1px #ddd;
 }
 
 .pioneer-wrapper .circle .text img {
@@ -1197,7 +1220,7 @@ h2 {
     height: 30px;
     width: 30px;
     background-color: #fff;
-    border: 1px solid #ddd;
+    box-shadow: 3px 3px 10px -1px #ddd;
     text-align: center;
     border-radius: 50%;
     line-height: 26px;
@@ -1205,6 +1228,12 @@ h2 {
 }
 .common-circle .text:hover img {
  	animation: bounce 1s infinite;
+}
+.modal-backdrop.show {
+	opacity: 0.8;
+}
+.award-pg {
+	margin-top: 20px;
 }
 /*responsive css homepage*/
 @media (min-width: 320px) and (max-width: 767px) {

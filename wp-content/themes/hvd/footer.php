@@ -44,7 +44,7 @@
         <li>
             <img src="<?php echo site_url();?>/wp-content/themes/hvd/assets/images/Doctors.png" width="24" height="24">
             <img src="<?php echo site_url();?>/wp-content/themes/hvd/assets/images/doctors_blue_24dp.png" width="24" height="24">
-            <p>Doctor</p>
+            <p><a href="/doctors/">Doctor</a></p>
         </li>
         <li>
             <img src="<?php echo site_url();?>/wp-content/themes/hvd/assets/images/Donate.png" width="24" height="24">
