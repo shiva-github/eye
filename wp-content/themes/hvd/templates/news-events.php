@@ -45,13 +45,14 @@ get_header();
 					<div class="col-md-12">
 						<div class="feature-news-box">
 							<div class="w-50 float-left">
+								<div class="feature-text pl-5">Featured News</div>
 								<div class="news-listing-title pl-5 pr-3">
 									<?php echo the_title(); ?>
 								</div>
 								<div class="news-listing-date pl-5 pr-3 mt-1">
 								<em><?php echo the_date(); ?></em>
 								</div>
-								<div class="feature-text pl-5">Featured News</div>
+								
 								<div class="w-100 clear-both pl-5 pr-3 mt-3 mb-3"><a href="<?php echo get_permalink(); ?>" class="learn-more">Read more</a></div>
 							</div>
 							<div class="news-listing-feature w-50  float-left">
@@ -62,7 +63,7 @@ get_header();
 						echo the_post_thumbnail('large', array('class'=>' w-100 ')); 
 					else:
 						?>
-						<img src="<?php echo site_url();?>/wp-content/themes/hvd/assets/images/download.jpg" alt="Default News Image" class="img-responsive" width="100%"/>
+						<img src="<?php echo site_url();?>/wp-content/themes/hvd/assets/images/In-the-News_default.png" alt="Default News Image" class="img-responsive" width="100%"/>
 						<?php
 					endif;
 
@@ -84,7 +85,7 @@ get_header();
 						echo the_post_thumbnail('small', array('class'=>' w-100 ')); 
 					else:
 						?>
-						<img src="<?php echo site_url();?>/wp-content/themes/hvd/assets/images/download.jpg" alt="Default News Image" class="img-responsive" width="100%" />
+						<img src="<?php echo site_url();?>/wp-content/themes/hvd/assets/images/In-the-News_default.png" alt="Default News Image" class="img-responsive" width="100%" />
 						<?php
 					endif;
 

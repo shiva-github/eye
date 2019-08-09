@@ -28,7 +28,7 @@
         <div class="d-none d-sm-block d-md-block col-md-9 float-right text-right">
 
           <span class="phone-head">020 2697 4000</span>
-          <span class="text-head"><a href="http://www.pbmaindia.org/" target="_blank">TECHNICAL TRAINING INSTITUTE PBMA</a> | WOMEN'S DESTITUE</span>
+          <span class="text-head"><a href="http://www.pbmaindia.org/" target="_blank">TECHNICAL TRAINING INSTITUTE PBMA</a> | WOMEN'S DESTITUTE</span>
           <span class="social-head">
             <a href="https://www.facebook.com/hvdeh.org/" title="Facebook Social Media" onclick="return ! window.open(this.href);" ><img src="<?php echo site_url().'/wp-content/themes/hvd/assets/images/facebook.png'; ?>" alt="Facebook" /></a>
             <a href="#" target="_blank" title="Twitter Social Media"><img src="<?php echo site_url().'/wp-content/themes/hvd/assets/images/twitter.png'; ?>" alt="" /></a>
@@ -70,7 +70,7 @@
                   <?php
                   wp_nav_menu( array(
                     'theme_location' => 'top_menu',
-                    'depth' => 2,
+                    'depth' => 3,
                     'container' => false,
                     'menu_class' => 'navbar-nav float-right mr-0 ml-auto',
                     'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
@@ -80,7 +80,7 @@
                 </nav>
 
                 <div class="search-header">
-                 | <img src="<?php echo site_url(); ?>/wp-content/themes/hvd/assets/images/screenshot.png" alt="search image " width="20" class="toggle">
+                 |&nbsp;&nbsp; <img src="<?php echo site_url(); ?>/wp-content/themes/hvd/assets/images/HVD_search.png" alt="search image " width="12" class="toggle">
                  <div class="search-wrapper" style="display: none;">
                   <?php get_search_form();?>
                 </div>
@@ -93,4 +93,14 @@
       </div>
     </div>
   </header>
+  <?php 
+  //if (!site_url()) {
+    ?>
+    <div class="line-1"></div>
+    <div class="line-2"></div>
+    <div class="line-1"></div>
+    <?php
+  //}
+
+  ?>
 </div>

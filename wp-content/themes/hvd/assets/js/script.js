@@ -5,25 +5,22 @@
 		$(".accordion-desc").slideUp("slow");
 		$(".accordion ").removeClass("active");
 		$(".accordion-title").click(function(){
+			
 			if(!$(this).parent().hasClass("active")) {
+				$(".accordion-title").children("span").html('+');
+				$(".accordion-title").children("span").css('line-height', '20px');
 				$(".accordion-desc").slideUp("slow");
 				$(".accordion ").removeClass("active");
       			// add class to the one we clicked
       			$(this).parent().addClass("active");
       			$(this).next().slideToggle("slow");
+      			$(this).children("span").html('-');
+				$(this).children("span").css('line-height', '19px');
       		}
 
       	});
 
-		// homepage svg 
-		$(".pioneer-box").hover(function(){
-			//mouse in
-			$(this).find(".path-change").attr('d', 'M 0 0 q 230 -50 460 0');
-		}, function() {
-			//mouse out
-			$(this).find(".path-change").attr('d', 'M 0 0 q 230 50 460 0');
-		});
-
+		
 		// homepage side sticky block show hide
 		$(".content-block").scrollTop($(".content-block").scrollTop() + 100);
 		if ($(window).scrollTop() > 800) {

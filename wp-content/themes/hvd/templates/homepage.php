@@ -225,7 +225,8 @@ get_header();
 				?>
 				<div class="pioneer-content clear-both">
 					<div class="pioneer-box">
-						<div class="circle" style="    background-position-x: -75px;background-image: url(<?php echo $image1_pioneer['url']; ?>);" data-image="<?php echo $image1_pioneer['url']; ?>" data-name="<?php echo $name1_pioneer; ?>" data-designation="" data-html='<p>He founded The Poona Blind Men’s Association in the year 1952 in Pune and was the President of the organization.</p><p>He was affectionately called ‘Appaji’ by the blind people.</p><p>He was the recipient of Barrister Rustom  Merwanji Alpaiwala  Award for his outstanding contribution in social work and blind welfare in January, 1980.</p><p>He was also the recipient of Louis Braille Memorial Award on 25th May, 1980.</p>'>
+						<div class="circle data-circle" style="background-position-x: -75px;background-image: url(<?php echo $image1_pioneer['url']; ?>);" data-image="<?php echo $image1_pioneer['url']; ?>" data-name="<?php echo $name1_pioneer; ?>" data-designation="" data-html="">
+							<div class="data-html-desc" style="display: none;"><p>He founded The Poona Blind Men’s Association in the year 1952 in Pune and was the President of the organization.</p><p>He was affectionately called ‘Appaji’ by the blind people.</p><p>He was the recipient of Barrister Rustom  Merwanji Alpaiwala  Award for his outstanding contribution in social work and blind welfare in January, 1980.</p><p>He was also the recipient of Louis Braille Memorial Award on 25th May, 1980.</p></div>
 							<div class="text" data-toggle="modal" data-target="#bioModal"><img src="/wp-content/themes/hvd/assets/images/h-v-desai-angel-arrow.png"></div>
 						</div>
 						<div class="pioneer-name"><?php echo $name1_pioneer;?></div>
@@ -234,7 +235,9 @@ get_header();
 
 					<div class="pioneer-box">
 
-						<div class="circle" title="<?php echo $image2_pioneer['alt']; ?>" style="    background-position-x: -150px;background-image: url(<?php echo $image2_pioneer['url']; ?>);" data-image="<?php echo $image2_pioneer['url']; ?>" data-name="<?php echo $name2_pioneer; ?>">
+						<div class="circle data-circle" title="<?php echo $image2_pioneer['alt']; ?>" style="    background-position-x: -150px;background-image: url(<?php echo $image2_pioneer['url']; ?>);" data-image="<?php echo $image2_pioneer['url']; ?>" data-name="<?php echo $name2_pioneer; ?>">
+							
+							<div class="data-html-desc" style="display: none;"><p>He founded The Poona Blind Men’s Association in the year 1952 in Pune and was the President of the organization.</p><p>He was affectionately called ‘Appaji’ by the blind people.</p><p>He was the recipient of Barrister Rustom  Merwanji Alpaiwala  Award for his outstanding contribution in social work and blind welfare in January, 1980.</p><p>He was also the recipient of Louis Braille Memorial Award on 25th May, 1980.</p></div>
 							<div class="text"data-toggle="modal" data-target="#bioModal"><img src="/wp-content/themes/hvd/assets/images/h-v-desai-angel-arrow.png"></div>
 						</div>
 						<div class="pioneer-name"><?php echo $name2_pioneer;?></div>

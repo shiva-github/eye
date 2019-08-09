@@ -4,7 +4,7 @@
 	</div>
 	<div style="width: 20%;" class="search-btn float-left">
 		<button id="click-search" class="search-button" type="submit">
-			<img src="<?php echo site_url(); ?>/wp-content/themes/hvd/assets/images/screenshot.png" height="20px" width="20px" alt="search" />
+			<img src="<?php echo site_url(); ?>/wp-content/themes/hvd/assets/images/HVD_search.png" height="12px" width="12px" alt="search" />
 		</button>
 	</div>
 </form>
